@@ -885,6 +885,36 @@
       }
     }
 
+    /* ── MOBILE TOUCH ANIMATIONS (no hover on mobile) ── */
+    @media (hover: none) {
+      /* Dish cards: always show glass panel */
+      .dish-card-glass { opacity: 1 !important; transform: none !important; }
+      .dish-card-desc { opacity: 1 !important; max-height: 60px !important; }
+
+      /* Gallery items: subtle pulse on tap */
+      .gallery-item:active img { transform: scale(1.08); }
+
+      /* Menu items: gold flash on tap */
+      .menu-item-row:active { background: rgba(200,169,110,0.05); border-radius: 8px; }
+
+      /* Buttons: scale on tap */
+      .btn-gold:active, .btn-outline:active {
+        transform: scale(0.96) !important;
+        transition: transform 0.1s !important;
+      }
+
+      /* Pricing cards: glow on tap */
+      .pricing-card:active {
+        box-shadow: 0 0 30px rgba(200,169,110,0.2) !important;
+      }
+
+      /* Auto-shimmer on dish cards since no hover */
+      .dish-card::before {
+        animation: shimmerSweep 4s ease infinite !important;
+        opacity: 0.3 !important;
+      }
+    }
+
     /* ── MOBILE FIXES ── */
     @media (max-width: 768px) {
       /* Hero buttons — compact on mobile */
@@ -1255,7 +1285,7 @@
     <div class="loading-line-track">
       <div class="loading-line-fill"></div>
     </div>
-    <p class="loading-tagline" id="loading-tagline" aria-hidden="true" style="margin-top:18px; font-family:'Inter',sans-serif; font-size:0.72rem; letter-spacing:0.22em; text-transform:uppercase; color:rgba(200,169,110,0.85); height:1rem; overflow:hidden; opacity:0; animation: fadeInUp 0.6s ease forwards 1.2s;">you crave — we serve</p>
+    <p class="loading-tagline" id="loading-tagline" aria-hidden="true" style="margin-top:18px; font-family:'Inter',sans-serif; font-size:0.72rem; letter-spacing:0.22em; text-transform:uppercase; color:rgba(200,169,110,0.85); height:1rem; overflow:hidden;"></p>
   </div>
 </div>
 
@@ -2166,6 +2196,21 @@
         window.open('https://www.grubhub.com/restaurant/2140130', '_blank');
       }
     });
+  })();
+
+  // ─── LOADING TAGLINE TYPEWRITER (fast) ───
+  (function() {
+    var el = document.getElementById('loading-tagline');
+    if (!el) return;
+    var text = 'you crave — we serve';
+    var i = 0;
+    setTimeout(function type() {
+      if (i < text.length) {
+        el.textContent += text[i];
+        i++;
+        setTimeout(type, 40);
+      }
+    }, 1000);
   })();
 
   // ─── LOADING ANIMATION ───
