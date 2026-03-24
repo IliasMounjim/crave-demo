@@ -1032,52 +1032,17 @@
       }
       #menu-filters-wrap.scrolled-end::after { display: none !important; }
 
-      /* Header — single logo bubble on mobile, logo IS the menu trigger */
-      #header {
-        background: none !important;
-        backdrop-filter: none !important;
-        box-shadow: none !important;
-        padding: 0 !important;
-        pointer-events: none;
+      /* Header — hide default, show logo bubble only */
+      #header { display: none !important; }
+
+      /* Logo bubble — fixed top-left */
+      #mobile-logo-bubble {
+        display: flex !important;
       }
-      #header > nav {
-        pointer-events: auto;
-        padding: 0 !important;
-      }
-      #header .flex-shrink-0 {
-        position: fixed;
-        top: -10px;
-        left: -10px;
-        width: 100px;
-        height: 100px;
-        background: radial-gradient(circle at top left, rgba(13,13,13,0.98) 40%, rgba(13,13,13,0.6) 60%, transparent 80%);
-        border-radius: 0 0 50px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 52;
-        padding-right: 16px;
-        padding-bottom: 16px;
-        padding-top: 10px;
-        padding-left: 10px;
-        cursor: pointer;
-      }
-      #header .flex-shrink-0 img {
-        height: 28px !important;
-        filter: drop-shadow(0 0 6px rgba(200,169,110,0.2));
-      }
-      /* Hide the hamburger — logo is now the menu trigger */
-      #hamburger {
-        display: none !important;
-      }
-      #header .hidden.md\:flex,
-      #header .hidden.md\:block {
-        display: none !important;
-      }
-      #header.scrolled {
-        background: none !important;
-        backdrop-filter: none !important;
-        box-shadow: none !important;
+
+      /* Radial menu that grows from logo */
+      #radial-menu {
+        display: block !important;
       }
 
       /* Watermark smaller on mobile */
@@ -1291,6 +1256,27 @@
     </button>
   </nav>
 </header>
+
+<!-- MOBILE LOGO BUBBLE + RADIAL MENU -->
+<div id="mobile-logo-bubble" style="display:none; position:fixed; top:0; left:0; z-index:60; cursor:pointer;">
+  <div id="logo-bubble-bg" style="width:90px; height:90px; background:radial-gradient(circle at top left, rgba(13,13,13,0.98) 35%, rgba(13,13,13,0.5) 55%, transparent 75%); display:flex; align-items:flex-start; justify-content:flex-start; padding:16px;">
+    <img src="images/food/CRAVE-WHITE-768x325.png" alt="Menu" style="height:26px; width:auto; filter:drop-shadow(0 0 6px rgba(200,169,110,0.3));" />
+  </div>
+</div>
+
+<div id="radial-menu" style="display:none; position:fixed; top:0; left:0; z-index:59; pointer-events:none;">
+  <div id="radial-menu-bg" style="width:0; height:0; background:radial-gradient(circle at top left, rgba(13,13,13,0.98) 50%, rgba(13,13,13,0.85) 70%, transparent 90%); border-radius:0 0 100% 0; transition: width 0.4s cubic-bezier(0.25,0.1,0.25,1), height 0.4s cubic-bezier(0.25,0.1,0.25,1); overflow:hidden; pointer-events:none;">
+    <nav id="radial-nav" style="opacity:0; transition:opacity 0.3s ease 0.2s; padding:80px 24px 24px 24px; display:flex; flex-direction:column; gap:16px; pointer-events:auto;">
+      <a href="#home" class="radial-link" style="font-family:'Playfair Display',serif; font-size:1.3rem; color:#C8A96E; text-decoration:none; font-weight:500; opacity:0; transform:translateX(-20px); transition:all 0.3s ease;">Home</a>
+      <a href="#about" class="radial-link" style="font-family:'Playfair Display',serif; font-size:1.3rem; color:#F5F0E8; text-decoration:none; font-weight:500; opacity:0; transform:translateX(-20px); transition:all 0.3s ease;">About</a>
+      <a href="#menu" class="radial-link" style="font-family:'Playfair Display',serif; font-size:1.3rem; color:#F5F0E8; text-decoration:none; font-weight:500; opacity:0; transform:translateX(-20px); transition:all 0.3s ease;">Menu</a>
+      <a href="#gallery" class="radial-link" style="font-family:'Playfair Display',serif; font-size:1.3rem; color:#F5F0E8; text-decoration:none; font-weight:500; opacity:0; transform:translateX(-20px); transition:all 0.3s ease;">Gallery</a>
+      <a href="#contact" class="radial-link" style="font-family:'Playfair Display',serif; font-size:1.3rem; color:#F5F0E8; text-decoration:none; font-weight:500; opacity:0; transform:translateX(-20px); transition:all 0.3s ease;">Contact</a>
+      <div style="height:1px; background:rgba(200,169,110,0.15); margin:4px 0;"></div>
+      <a href="tel:7203798465" class="radial-link" style="font-family:'Inter',sans-serif; font-size:0.85rem; color:rgba(200,169,110,0.6); text-decoration:none; opacity:0; transform:translateX(-20px); transition:all 0.3s ease;">(720) 379-8465</a>
+    </nav>
+  </div>
+</div>
 
 <!-- Mobile Menu Backdrop -->
 <div id="mobile-backdrop" style="position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:39; opacity:0; pointer-events:none; transition:opacity 0.3s;"></div>
@@ -2215,6 +2201,73 @@
         window.open('https://www.grubhub.com/restaurant/2140130', '_blank');
       }
     });
+  })();
+
+  // ─── RADIAL MENU (mobile) ───
+  (function() {
+    var bubble = document.getElementById('mobile-logo-bubble');
+    var menuBg = document.getElementById('radial-menu-bg');
+    var nav = document.getElementById('radial-nav');
+    var links = document.querySelectorAll('.radial-link');
+    var backdrop = document.getElementById('mobile-backdrop');
+    if (!bubble || !menuBg) return;
+
+    var isOpen = false;
+
+    function openRadial() {
+      isOpen = true;
+      menuBg.style.width = '85vw';
+      menuBg.style.height = '85vh';
+      menuBg.style.pointerEvents = 'auto';
+      nav.style.opacity = '1';
+      if (backdrop) { backdrop.style.opacity = '1'; backdrop.style.pointerEvents = 'auto'; }
+      // Stagger links
+      links.forEach(function(link, i) {
+        setTimeout(function() {
+          link.style.opacity = '1';
+          link.style.transform = 'translateX(0)';
+        }, 100 + i * 60);
+      });
+    }
+
+    function closeRadial() {
+      isOpen = false;
+      links.forEach(function(link) {
+        link.style.opacity = '0';
+        link.style.transform = 'translateX(-20px)';
+      });
+      nav.style.opacity = '0';
+      setTimeout(function() {
+        menuBg.style.width = '0';
+        menuBg.style.height = '0';
+        menuBg.style.pointerEvents = 'none';
+      }, 150);
+      if (backdrop) { backdrop.style.opacity = '0'; backdrop.style.pointerEvents = 'none'; }
+    }
+
+    // Logo bubble click — toggle or go home
+    bubble.addEventListener('click', function() {
+      if (isOpen) {
+        closeRadial();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        openRadial();
+      }
+    });
+
+    // Clicking any link closes menu
+    links.forEach(function(link) {
+      link.addEventListener('click', function() {
+        closeRadial();
+      });
+    });
+
+    // Backdrop closes menu
+    if (backdrop) {
+      backdrop.addEventListener('click', function() {
+        if (isOpen) closeRadial();
+      });
+    }
   })();
 
   // ─── LOADING TAGLINE TYPEWRITER (fast) ───
