@@ -1048,35 +1048,36 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 60px;
-        height: 60px;
-        background: rgba(13,13,13,0.95);
+        width: 80px;
+        height: 80px;
+        background: radial-gradient(circle at top left, rgba(13,13,13,0.95) 50%, transparent 100%);
         backdrop-filter: blur(12px);
-        border-radius: 0 0 24px 0;
+        border-radius: 0 0 40px 0;
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 52;
-        border-bottom: 1px solid rgba(200,169,110,0.15);
-        border-right: 1px solid rgba(200,169,110,0.15);
+        padding-right: 8px;
+        padding-bottom: 8px;
       }
       #header .flex-shrink-0 img {
-        height: 24px !important;
+        height: 30px !important;
       }
       #hamburger {
         position: fixed !important;
         top: 0;
         right: 0;
-        width: 60px;
-        height: 60px;
-        background: rgba(13,13,13,0.95);
+        width: 80px;
+        height: 80px;
+        background: radial-gradient(circle at top right, rgba(13,13,13,0.95) 50%, transparent 100%);
         backdrop-filter: blur(12px);
-        border-radius: 0 0 0 24px;
+        border-radius: 0 0 0 40px;
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 52;
-        border-bottom: 1px solid rgba(200,169,110,0.15);
+        padding-left: 8px;
+        padding-bottom: 8px;
         border-left: 1px solid rgba(200,169,110,0.15);
         margin: 0 !important;
         padding: 0 !important;
@@ -1950,6 +1951,7 @@
     </div>
 
     <div id="more-options-content" style="max-height:0; overflow:hidden; transition:max-height 0.5s cubic-bezier(0.25,0.1,0.25,1); opacity:0;">
+    <div style="padding-top:20px;">
     <div class="grid md:grid-cols-2 gap-6 lg:gap-8 items-stretch max-w-4xl mx-auto">
 
       <!-- TIER 2: BUSINESS — $1,200 (MOST POPULAR) -->
@@ -1992,19 +1994,14 @@
         <a href="#monthly-addons" class="btn-outline w-full text-center text-sm" style="padding:13px 20px; margin-top:auto;">Go Premium</a>
       </div>
     </div>
-    </div>
 
-    <!-- Monthly maintenance tiers — collapsible -->
-    <div id="monthly-addons" class="text-center mt-16 mb-6 reveal">
-      <div style="height:1px; background:linear-gradient(90deg, transparent, rgba(200,169,110,0.2), transparent); max-width:300px; margin:0 auto 24px;"></div>
-      <button id="addons-toggle" style="background:none; border:1px solid rgba(200,169,110,0.2); border-radius:12px; padding:14px 32px; cursor:pointer; display:inline-flex; align-items:center; gap:10px; transition:all 0.3s; color:#C8A96E;" onmouseenter="this.style.borderColor='rgba(200,169,110,0.5)';this.style.background='rgba(200,169,110,0.05)'" onmouseleave="this.style.borderColor='rgba(200,169,110,0.2)';this.style.background='none'">
-        <span style="font-family:Inter,sans-serif; font-size:0.7rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase;">Optional Add-Ons</span>
-        <span style="font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:600;">Monthly Maintenance</span>
-        <svg id="addons-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" style="transition:transform 0.3s;"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </button>
+    <!-- Monthly maintenance — inside same collapse -->
+    <div style="padding-top:20px;" id="monthly-addons">
+    <div class="text-center mb-8">
+      <div style="height:1px; background:linear-gradient(90deg, transparent, rgba(200,169,110,0.2), transparent); max-width:300px; margin:0 auto 20px;"></div>
+      <p class="font-inter uppercase tracking-widest text-gold mb-2" style="font-size:0.7rem; letter-spacing:0.15em;">Optional Monthly Add-On</p>
+      <h3 class="font-playfair text-cream" style="font-size:1.3rem; font-weight:600;">Monthly Maintenance</h3>
     </div>
-
-    <div id="addons-content" style="max-height:0; overflow:hidden; transition:max-height 0.5s cubic-bezier(0.25,0.1,0.25,1); opacity:0;">
     <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
       <!-- MONTHLY ESSENTIALS — $99/mo -->
       <div class="pricing-card reveal" style="background:rgba(22,22,22,0.6); backdrop-filter:blur(8px); border:1px solid rgba(200,169,110,0.15); border-radius:16px; padding:28px 24px; display:flex; flex-direction:column;">
@@ -2037,6 +2034,7 @@
       </div>
     </div>
     </div>
+    </div><!-- close more-options-content -->
 
     <p class="text-center mt-10 font-inter" style="font-size:0.8rem; color:rgba(245,240,232,0.35); max-width:680px; margin-left:auto; margin-right:auto;">All packages include domain setup assistance and a training walkthrough. Monthly plans can be added to any tier and cancelled anytime. Custom packages available on request.</p>
     <div class="text-center mt-8">
