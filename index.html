@@ -213,10 +213,9 @@
       height: 1rem;
       overflow: hidden;
     }
-    .loading-tagline span {
-      display: inline-block;
-      opacity: 0;
-      transform: translateY(4px);
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* ── HEADER ── */
@@ -993,6 +992,90 @@
         letter-spacing: 0.02em !important;
       }
 
+      /* Menu filter scroll hint */
+      #menu-filters-wrap {
+        position: relative !important;
+      }
+      #menu-filters-wrap::after {
+        content: '›';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #C8A96E;
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding: 0 8px;
+        background: linear-gradient(90deg, transparent, rgba(13,13,13,0.9) 40%);
+        pointer-events: none;
+        animation: scrollHintPulse 1.5s ease-in-out infinite;
+        z-index: 2;
+      }
+      @keyframes scrollHintPulse {
+        0%, 100% { opacity: 0.5; transform: translateY(-50%) translateX(0); }
+        50% { opacity: 1; transform: translateY(-50%) translateX(3px); }
+      }
+      #menu-filters-wrap.scrolled-end::after { display: none !important; }
+
+      /* Header bubbles on mobile */
+      #header {
+        background: none !important;
+        backdrop-filter: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        pointer-events: none;
+      }
+      #header > nav {
+        pointer-events: auto;
+        padding: 0 !important;
+      }
+      #header .flex-shrink-0 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 60px;
+        background: rgba(13,13,13,0.95);
+        backdrop-filter: blur(12px);
+        border-radius: 0 0 24px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 52;
+        border-bottom: 1px solid rgba(200,169,110,0.15);
+        border-right: 1px solid rgba(200,169,110,0.15);
+      }
+      #header .flex-shrink-0 img {
+        height: 24px !important;
+      }
+      #hamburger {
+        position: fixed !important;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        background: rgba(13,13,13,0.95);
+        backdrop-filter: blur(12px);
+        border-radius: 0 0 0 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 52;
+        border-bottom: 1px solid rgba(200,169,110,0.15);
+        border-left: 1px solid rgba(200,169,110,0.15);
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      #header .hidden.md\:flex,
+      #header .hidden.md\:block {
+        display: none !important;
+      }
+      #header.scrolled {
+        background: none !important;
+        backdrop-filter: none !important;
+        box-shadow: none !important;
+      }
+
       /* Watermark smaller on mobile */
       .wm-text {
         font-size: 1.5rem !important;
@@ -1172,7 +1255,7 @@
     <div class="loading-line-track">
       <div class="loading-line-fill"></div>
     </div>
-    <div class="loading-tagline" id="loading-tagline" aria-hidden="true"></div>
+    <p class="loading-tagline" id="loading-tagline" aria-hidden="true" style="margin-top:18px; font-family:'Inter',sans-serif; font-size:0.72rem; letter-spacing:0.22em; text-transform:uppercase; color:rgba(200,169,110,0.85); height:1rem; overflow:hidden; opacity:0; animation: fadeInUp 0.6s ease forwards 1.2s;">you crave — we serve</p>
   </div>
 </div>
 
@@ -2085,68 +2168,16 @@
     });
   })();
 
-  // ─── LOADING ANIMATION (reusable) ───
-  const taglineText = 'you crave, we serve';
-  const taglineEl = document.getElementById('loading-tagline');
+  // ─── LOADING ANIMATION ───
   const overlay = document.getElementById('loading-overlay');
 
-  function runLoader(scrollToTop) {
-    // Reset overlay
-    overlay.style.display = 'flex';
-    overlay.classList.remove('fade-out');
-    taglineEl.innerHTML = '';
-
-    if (scrollToTop) {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }
-
-    // Type tagline
-    var idx = 0;
-    function typeIt() {
-      if (idx < taglineText.length) {
-        var s = document.createElement('span');
-        s.textContent = taglineText[idx] === ' ' ? '\u00A0' : taglineText[idx];
-        s.style.cssText = 'opacity:0; transform:translateY(4px); display:inline-block; transition: opacity 0.12s ease, transform 0.12s ease;';
-        taglineEl.appendChild(s);
-        requestAnimationFrame(function() {
-          requestAnimationFrame(function() {
-            s.style.opacity = '1';
-            s.style.transform = 'translateY(0)';
-          });
-        });
-        idx++;
-        setTimeout(typeIt, 65);
-      }
-    }
-    setTimeout(typeIt, 1200);
-
-    // Dismiss at 2.6s
-    setTimeout(function() {
-      overlay.classList.add('fade-out');
-      overlay.addEventListener('animationend', function() {
-        overlay.style.display = 'none';
-      }, { once: true });
-    }, 2600);
-  }
-
-  // Initial load
-  runLoader(false);
-
-  // Hook into Home links, logos, and View Again
-  document.querySelectorAll('a[href="#home"]').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      runLoader(true);
-    });
-  });
-
-  // Logo clicks in header
-  document.querySelectorAll('a[aria-label="Crave Mediterranean Grill - Home"]').forEach(function(logo) {
-    logo.addEventListener('click', function(e) {
-      e.preventDefault();
-      runLoader(true);
-    });
-  });
+  // Dismiss overlay at 2.6s with clip-path wipe
+  setTimeout(function () {
+    overlay.classList.add('fade-out');
+    overlay.addEventListener('animationend', function () {
+      overlay.style.display = 'none';
+    }, { once: true });
+  }, 2600);
 
   // ─── HERO PARTICLES ───
   const particleContainer = document.getElementById('hero-particles');
@@ -2362,6 +2393,18 @@
 
   // Default: show Appetizers only on load
   filterMenu('appetizers');
+
+  // Hide right scroll hint once scrolled to end
+  var menuFilters = document.getElementById('menu-filters');
+  if (menuFilters) {
+    menuFilters.addEventListener('scroll', function() {
+      var wrap = document.getElementById('menu-filters-wrap');
+      if (wrap) {
+        var atEnd = menuFilters.scrollLeft + menuFilters.clientWidth >= menuFilters.scrollWidth - 10;
+        wrap.classList.toggle('scrolled-end', atEnd);
+      }
+    });
+  }
 
   // ─── TESTIMONIAL CAROUSEL ───
   const track = document.getElementById('testimonial-track');
@@ -2597,12 +2640,12 @@
       }
     }, { passive: true });
 
-    // View Again button — unlock and replay loader
+    // View Again button — unlock and scroll to top
     if (viewAgainBtn) {
       viewAgainBtn.addEventListener('click', function() {
         locked = false;
         if (viewAgainWrap) { viewAgainWrap.style.display = 'none'; }
-        runLoader(true);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
   })();
