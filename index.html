@@ -1644,8 +1644,8 @@
 <!-- Gold Divider — after gallery -->
 <div style="max-width:120px; margin:0 auto; height:1px; background:linear-gradient(90deg, transparent, rgba(200,169,110,0.3), transparent);"></div>
 
-<!-- (Testimonials moved below order section) -->
-<section class="py-24 px-6 relative overflow-hidden" style="display:none;" aria-label="Customer testimonials">
+<!-- (Old testimonials removed — now inside order+review section) -->
+<section style="display:none;" aria-hidden="true">
   <div class="absolute inset-0" style="z-index:0;">
     <img src="images/food/baklava-768x432.jpg" alt="" class="w-full h-full object-cover" style="filter:brightness(0.18) saturate(0.4) blur(2px); opacity:0.6;" loading="lazy" aria-hidden="true" />
   </div>
@@ -1789,40 +1789,11 @@
         </p>
       </div>
     </div>
-  </div>
-</section>
+    <!-- Subtle divider -->
+    <div style="max-width:200px; margin:0 auto; height:1px; background:linear-gradient(90deg, transparent, rgba(200,169,110,0.2), transparent);"></div>
 
-<!-- TESTIMONIALS (moved here — between order and review) -->
-<section class="py-20 px-6 relative overflow-hidden" aria-label="Customer testimonials">
-  <div class="absolute inset-0" style="z-index:0;">
-    <img src="images/food/baklava-768x432.jpg" alt="" class="w-full h-full object-cover" style="filter:brightness(0.18) saturate(0.4) blur(2px); opacity:0.6;" loading="lazy" aria-hidden="true" />
-  </div>
-  <div class="absolute inset-0" style="z-index:0; background:linear-gradient(180deg, #0f0e0c 0%, rgba(15,14,12,0.45) 25%, rgba(15,14,12,0.45) 75%, #0f0e0c 100%);"></div>
-  <div class="max-w-4xl mx-auto relative" style="z-index:1;">
-    <div class="text-center mb-10 reveal">
-      <p class="font-inter uppercase tracking-widest text-gold mb-3" style="font-size:0.8rem; letter-spacing:0.15em;">Reviews</p>
-      <h2 class="font-playfair text-cream" style="font-size:clamp(1.8rem, 3.5vw, 2.4rem); font-weight:600;">What Our Guests Say</h2>
-    </div>
-    <div class="reveal" style="position:relative; overflow:hidden; text-align:center; padding:24px 16px;">
-      <div aria-hidden="true" style="position:absolute; top:-10px; left:20px; font-family:'Playfair Display',serif; font-size:8rem; line-height:1; color:rgba(200,169,110,0.06); pointer-events:none; z-index:0;">&ldquo;</div>
-      <p class="font-playfair font-medium text-cream" style="font-size:clamp(1rem, 2.5vw, 1.25rem); line-height:1.7; font-style:italic; position:relative; z-index:1; max-width:600px; margin:0 auto;">
-        "Finally a place that provides fresh food made with high quality ingredients at a decent price."
-      </p>
-      <p class="font-inter text-gold font-medium mt-4" style="font-size:0.9rem;">— Jonathan Lee</p>
-    </div>
-  </div>
-</section>
-
-<!-- GOOGLE REVIEW + LOVED YOUR EXPERIENCE -->
-<section class="relative overflow-hidden" aria-label="Review section">
-  <div class="absolute inset-0" style="z-index:0;">
-    <img src="images/crave-interior.webp" alt="" class="w-full h-full object-cover" style="object-position: center 75%; filter: brightness(0.3) saturate(0.7);" loading="lazy" aria-hidden="true" />
-  </div>
-  <div class="absolute inset-0" style="z-index:1; background: linear-gradient(to bottom, #0D0D0D 0%, rgba(13,13,13,0.2) 15%, rgba(13,13,13,0.15) 50%, rgba(13,13,13,0.2) 85%, #0D0D0D 100%);"></div>
-  <div class="absolute inset-0" style="z-index:1; background: radial-gradient(ellipse at center, transparent 30%, rgba(13,13,13,0.6) 100%);"></div>
-  <div class="relative" style="z-index:2;">
     <!-- GOOGLE REVIEW CTA -->
-    <div class="py-12 px-6">
+    <div class="py-16 px-6">
       <div class="max-w-3xl mx-auto text-center reveal">
         <h2 class="font-playfair text-cream" style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:600;">Loved Your Experience?</h2>
         <p class="mt-4 font-inter" style="color:rgba(245,240,232,0.7); font-size:1.05rem; max-width:500px; margin:0 auto;">Your review helps our family business grow. It takes 30 seconds and means the world to us.</p>
@@ -1838,6 +1809,24 @@
           <span class="star-shine" style="animation-delay:0.3s;"><svg width="44" height="44" viewBox="0 0 20 20" fill="#C8A96E" style="filter:drop-shadow(0 0 10px rgba(200,169,110,0.6));"><path d="M10 0L12.2 7.8H20L13.8 12.2L16 20L10 15.6L4 20L6.2 12.2L0 7.8H7.8Z"/></svg></span>
           <span class="star-shine" style="animation-delay:0.45s;"><svg width="38" height="38" viewBox="0 0 20 20" fill="#C8A96E" style="transform:rotate(6deg) translateY(1px); filter:drop-shadow(0 0 5px rgba(200,169,110,0.4));"><path d="M10 0L12.2 7.8H20L13.8 12.2L16 20L10 15.6L4 20L6.2 12.2L0 7.8H7.8Z"/></svg></span>
           <span class="star-shine" style="animation-delay:0.6s;"><svg width="32" height="32" viewBox="0 0 20 20" fill="#C8A96E" style="transform:rotate(12deg) translateY(3px); filter:drop-shadow(0 0 4px rgba(200,169,110,0.3));"><path d="M10 0L12.2 7.8H20L13.8 12.2L16 20L10 15.6L4 20L6.2 12.2L0 7.8H7.8Z"/></svg></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subtle divider -->
+    <div style="max-width:200px; margin:0 auto; height:1px; background:linear-gradient(90deg, transparent, rgba(200,169,110,0.2), transparent);"></div>
+
+    <!-- TESTIMONIALS -->
+    <div class="py-16 px-6">
+      <div class="max-w-4xl mx-auto text-center reveal">
+        <p class="font-inter uppercase tracking-widest text-gold mb-3" style="font-size:0.75rem; letter-spacing:0.15em;">Reviews</p>
+        <h2 class="font-playfair text-cream mb-8" style="font-size:clamp(1.6rem, 3.5vw, 2.2rem); font-weight:600;">What Our Guests Say</h2>
+        <div style="position:relative; padding:20px 16px;">
+          <div aria-hidden="true" style="position:absolute; top:-10px; left:20px; font-family:'Playfair Display',serif; font-size:7rem; line-height:1; color:rgba(200,169,110,0.06); pointer-events:none;">&ldquo;</div>
+          <p class="font-playfair font-medium text-cream" style="font-size:clamp(1rem, 2.5vw, 1.2rem); line-height:1.8; font-style:italic; max-width:550px; margin:0 auto;">
+            "Finally a place that provides fresh food made with high quality ingredients at a decent price."
+          </p>
+          <p class="font-inter text-gold font-medium mt-4" style="font-size:0.85rem;">— Jonathan Lee</p>
         </div>
       </div>
     </div>
