@@ -1,0 +1,2603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crave Mediterranean Grill | Authentic Lebanese &amp; Mediterranean Food in Glendale, CO</title>
+  <meta name="description" content="Crave Mediterranean Grill is a family-owned Lebanese &amp; Mediterranean restaurant in Glendale, Colorado. Fresh ingredients, family recipes, kabobs, hummus, lamb shank, and more. Order online or dine in." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:title" content="Crave Mediterranean Grill | Authentic Lebanese &amp; Mediterranean Food in Glendale, CO" />
+  <meta property="og:description" content="Family recipes. Fresh ingredients. Warm smiles. Experience authentic Mediterranean and Lebanese cuisine in Glendale, CO." />
+  <meta property="og:image" content="images/food/meat-lover.jpg" />
+  <meta property="og:url" content="https://cravemediterraneangrill.com" />
+  <meta property="og:site_name" content="Crave Mediterranean Grill" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Crave Mediterranean Grill | Glendale, CO" />
+  <meta name="twitter:description" content="Family recipes. Fresh ingredients. Warm smiles." />
+  <meta name="twitter:image" content="images/food/meat-lover.jpg" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Crave Mediterranean Grill",
+    "image": "images/food/meat-lover.jpg",
+    "url": "https://cravemediterraneangrill.com",
+    "telephone": "+17203798465",
+    "email": "cravemediterraneangrill@gmail.com",
+    "priceRange": "$$",
+    "servesCuisine": ["Mediterranean", "Lebanese", "Greek", "Middle Eastern"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1000 S Colorado Blvd Ste 103",
+      "addressLocality": "Glendale",
+      "addressRegion": "CO",
+      "postalCode": "80246",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.7112,
+      "longitude": -104.9324
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "11:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "12:00",
+        "closes": "20:00"
+      }
+    ],
+    "hasMenu": "https://cravemediterraneangrill.com/menu",
+    "acceptsReservations": "False"
+  }
+  </script>
+
+  <!-- Tailwind CSS (local) -->
+  <script src="tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-dark': '#0D0D0D',
+            'gold': '#C8A96E',
+            'gold-light': '#D9BF8C',
+            'cream': '#F5F0E8',
+            'burgundy': '#8B2635',
+            'olive': '#4A5D3A',
+            'surface': '#161616',
+            'surface-2': '#1E1E1E',
+          },
+          fontFamily: {
+            'playfair': ['"Playfair Display"', 'Georgia', 'serif'],
+            'inter': ['Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @font-face { font-family: 'Playfair Display'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/playfair-regular.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-weight: 600; font-style: normal; font-display: swap; src: url('fonts/playfair-semibold.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-weight: 700; font-style: normal; font-display: swap; src: url('fonts/playfair-bold.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/inter-regular.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-weight: 500; font-style: normal; font-display: swap; src: url('fonts/inter-medium.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-weight: 600; font-style: normal; font-display: swap; src: url('fonts/inter-semibold.woff2') format('woff2'); }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: #0D0D0D;
+      color: #F5F0E8;
+      font-family: 'Inter', system-ui, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── GRAIN TEXTURE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9998;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 128px 128px;
+    }
+
+    /* ── GOLD SHIMMER ANIMATION ── */
+    @keyframes goldShimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    @keyframes shimmerSweep {
+      0% { transform: translateX(-100%) skewX(-15deg); opacity: 0; }
+      30% { opacity: 1; }
+      70% { opacity: 1; }
+      100% { transform: translateX(300%) skewX(-15deg); opacity: 0; }
+    }
+    @keyframes goldLinePulse {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    /* ── LOADING OVERLAY ── */
+    #loading-overlay {
+      position: fixed;
+      inset: 0;
+      background: #0D0D0D;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    #loading-overlay.fade-out {
+      animation: loadingWipe 0.7s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+    }
+    @keyframes loadingWipe {
+      0% { clip-path: inset(0 0 0 0); opacity: 1; }
+      100% { clip-path: inset(0 0 100% 0); opacity: 0; }
+    }
+
+    .loading-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+    .loading-logo-wrap {
+      opacity: 0;
+      animation: logoAppear 0.6s ease forwards 0.2s;
+      position: relative;
+    }
+    @keyframes logoAppear {
+      0% { opacity: 0; transform: scale(0.92); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .loading-logo-wrap::after {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at center, rgba(200,169,110,0.18) 0%, transparent 70%);
+      animation: logoGlow 1.2s ease-in-out infinite alternate;
+    }
+    @keyframes logoGlow {
+      from { opacity: 0.4; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1.05); }
+    }
+
+    .loading-line-track {
+      width: 160px;
+      height: 1px;
+      background: rgba(200,169,110,0.15);
+      margin-top: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .loading-line-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, transparent, #C8A96E, #D9BF8C, #C8A96E, transparent);
+      animation: lineExpand 1.0s cubic-bezier(0.4,0,0.2,1) forwards 0.6s;
+    }
+    @keyframes lineExpand {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+
+    .loading-tagline {
+      margin-top: 18px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(200,169,110,0.85);
+      height: 1rem;
+      overflow: hidden;
+    }
+    .loading-tagline span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(4px);
+    }
+
+    /* ── HEADER ── */
+    #header {
+      transition: background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
+    }
+    #header.scrolled {
+      background-color: rgba(13, 13, 13, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 rgba(200, 169, 110, 0.15);
+    }
+
+    /* ── MOBILE NAV ── */
+    #mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    #mobile-menu.open { transform: translateX(0); }
+
+    /* ── HERO PARALLAX ── */
+    #hero-bg {
+      transform: translateZ(0);
+      will-change: transform;
+    }
+
+    /* ── HERO FLOATING PARTICLES ── */
+    #hero-particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 2;
+    }
+    #hero-particles::before,
+    #hero-particles::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: #C8A96E;
+      opacity: 0;
+      animation: particleFloat linear infinite;
+    }
+    @keyframes particleFloat {
+      0% { opacity: 0; transform: translateY(0) scale(1); }
+      10% { opacity: 0.6; }
+      90% { opacity: 0.3; }
+      100% { opacity: 0; transform: translateY(-120px) scale(0.5); }
+    }
+
+    /* ── HERO TEXT STAGGER ── */
+    .hero-el {
+      opacity: 0;
+      transform: translateY(28px);
+      animation: heroReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    @keyframes heroReveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── SCROLL ANIMATIONS ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    .reveal.slide-left { transform: translateX(-32px); }
+    .reveal.slide-right { transform: translateX(32px); }
+    .reveal.visible { opacity: 1; transform: translate(0); }
+
+    /* ── GOLD DECORATIVE LINE ── */
+    .gold-line::before {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, #C8A96E, #D9BF8C, #C8A96E);
+      background-size: 200% auto;
+      animation: goldLinePulse 3s ease infinite;
+      margin-bottom: 16px;
+    }
+
+    /* ── SECTION DIVIDER ── */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 0 0 8px;
+    }
+    .section-divider-line {
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(200,169,110,0.5), transparent);
+    }
+    .section-divider-ornament {
+      color: #C8A96E;
+      font-size: 0.7rem;
+      letter-spacing: 0.4em;
+      opacity: 0.7;
+    }
+
+    /* ── DISH CARDS — GLASS MORPHISM ── */
+    .dish-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      cursor: pointer;
+      border: 1px solid rgba(200,169,110,0.18);
+      transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease, border-color 0.3s ease;
+    }
+    .dish-card img {
+      transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .dish-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(200,169,110,0.5), 0 0 30px rgba(200,169,110,0.15);
+      border-color: rgba(200,169,110,0.55);
+    }
+    .dish-card:hover img {
+      transform: scale(1.08);
+    }
+
+    /* Gold shimmer sweep on hover */
+    .dish-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 100%;
+      background: linear-gradient(105deg, transparent 30%, rgba(200,169,110,0.22) 50%, transparent 70%);
+      z-index: 10;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.1s;
+    }
+    .dish-card:hover::before {
+      opacity: 1;
+      animation: shimmerSweep 0.7s ease forwards;
+    }
+
+    /* Glass panel at bottom */
+    .dish-card-glass {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background: rgba(10,8,6,0.55);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(200,169,110,0.18);
+      transform: translateY(0);
+      transition: padding 0.4s ease, background 0.3s ease;
+    }
+    .dish-card:hover .dish-card-glass {
+      padding: 24px 20px 22px;
+      background: rgba(10,8,6,0.7);
+    }
+
+    .dish-card-desc {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      font-size: 0.78rem;
+      line-height: 1.5;
+      color: rgba(245,240,232,0.75);
+      transition: opacity 0.35s ease 0.05s, max-height 0.35s ease;
+    }
+    .dish-card:hover .dish-card-desc {
+      opacity: 1;
+      max-height: 60px;
+    }
+
+    /* Dish carousel */
+    .dish-slide {
+      flex: 0 0 calc(30%);
+      padding: 0 6px;
+      box-sizing: border-box;
+    }
+    @media (max-width: 768px) {
+      .dish-slide {
+        flex: 0 0 75%;
+        padding: 0 4px;
+      }
+    }
+
+    /* Price badge — prominent jewel style */
+    .price-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: linear-gradient(135deg, #C8A96E 0%, #D9BF8C 50%, #C8A96E 100%);
+      background-size: 200% auto;
+      animation: goldLinePulse 4s ease infinite;
+      color: #0D0D0D;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.02em;
+      box-shadow: 0 2px 12px rgba(200,169,110,0.45), 0 0 0 1px rgba(200,169,110,0.3);
+      z-index: 5;
+    }
+
+    /* ── MENU TABS ── */
+    .tab-btn {
+      position: relative;
+      padding: 10px 24px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(200, 169, 110, 0.6);
+      border: 1px solid rgba(200, 169, 110, 0.15);
+      border-radius: 8px;
+      background: rgba(200, 169, 110, 0.04);
+      cursor: pointer;
+      overflow: hidden;
+      transition: color 0.3s, border-color 0.3s, background 0.3s, box-shadow 0.3s;
+    }
+    .tab-btn:hover {
+      color: #C8A96E;
+      border-color: rgba(200, 169, 110, 0.3);
+      background: rgba(200, 169, 110, 0.08);
+    }
+    #menu-filters::-webkit-scrollbar { display: none; }
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.08) 50%, transparent 70%);
+      transform: translateX(-100%);
+      transition: transform 0s;
+    }
+    .tab-btn:hover::after {
+      animation: shimmerSweep 0.6s ease forwards;
+    }
+    .tab-btn.active {
+      color: #0D0D0D;
+      background: linear-gradient(135deg, #C8A96E, #D9BF8C, #C8A96E);
+      background-size: 200% auto;
+      animation: goldLinePulse 3s ease infinite;
+      border-color: #C8A96E;
+      box-shadow: 0 2px 12px rgba(200,169,110,0.35), inset 0 1px 0 rgba(255,255,255,0.2);
+      font-weight: 700;
+    }
+    .tab-panel {
+      display: none;
+      animation: tabFade 0.35s ease;
+    }
+    .tab-panel.active { display: block; }
+    @keyframes tabFade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── MENU PRICE ── */
+    .menu-price {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: #C8A96E;
+      text-shadow: 0 0 12px rgba(200,169,110,0.5), 0 0 24px rgba(200,169,110,0.2);
+      white-space: nowrap;
+    }
+
+    /* ── MENU ITEM NAME GLOW ── */
+    .menu-item-row .font-playfair.font-medium {
+      text-shadow: 0 0 8px rgba(245,240,232,0.1);
+    }
+
+    /* ── TESTIMONIAL CAROUSEL ── */
+    .testimonial-track {
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .testimonial-slide-active {
+      position: relative;
+    }
+    .testimonial-slide-active::before {
+      content: '';
+      position: absolute;
+      inset: -40px;
+      background: radial-gradient(ellipse at center, rgba(200,169,110,0.07) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(200, 169, 110, 0.3);
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .dot.active {
+      background: #C8A96E;
+      transform: scale(1.3);
+    }
+
+    /* ── GALLERY ── */
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 8px;
+      box-shadow: inset 0 0 0 0px #C8A96E;
+      transition: box-shadow 0.4s ease;
+      pointer-events: none;
+    }
+    .gallery-item:hover::after {
+      box-shadow: inset 0 0 0 2px rgba(200,169,110,0.7), 0 0 30px rgba(200,169,110,0.2);
+    }
+    /* Gold vignette on hover */
+    .gallery-item::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 40%, rgba(200,169,110,0.18) 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 1;
+      border-radius: 8px;
+    }
+    .gallery-item:hover::before { opacity: 1; }
+
+    /* ── LIGHTBOX ── */
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.94);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    /* ── SCROLL INDICATOR ── */
+    .scroll-indicator {
+      animation: scrollBounce 2s ease-in-out infinite;
+    }
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateY(0) translateX(-50%); opacity: 0.7; }
+      50% { transform: translateY(10px) translateX(-50%); opacity: 1; }
+    }
+
+    /* ── FLOATING ORDER BUTTON ── */
+    #floating-order {
+      animation: floatPulse 2.5s ease-in-out infinite;
+    }
+    @keyframes floatPulse {
+      0%, 100% { box-shadow: 0 4px 20px rgba(200,169,110,0.4), 0 0 0 0px rgba(200,169,110,0.3); }
+      50% { box-shadow: 0 4px 36px rgba(200,169,110,0.7), 0 0 0 6px rgba(200,169,110,0.08); }
+    }
+
+    /* ── BUTTONS ── */
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #C8A96E 0%, #E8D49A 25%, #C8A96E 50%, #D9BF8C 75%, #C8A96E 100%);
+      background-size: 300% auto;
+      color: #0D0D0D;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-radius: 4px;
+      border: 2px solid #C8A96E;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s;
+    }
+    .btn-gold::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 50px; height: 100%;
+      background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.25) 50%, transparent 70%);
+      opacity: 0;
+    }
+    .btn-gold:hover {
+      background-position: right center;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(200,169,110,0.55), 0 2px 8px rgba(200,169,110,0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+    .btn-gold:hover::after {
+      opacity: 1;
+      animation: shimmerSweep 0.6s ease forwards;
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: #C8A96E;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-radius: 4px;
+      border: 2px solid #C8A96E;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+    }
+    .btn-outline::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 50px; height: 100%;
+      background: linear-gradient(105deg, transparent 30%, rgba(200,169,110,0.18) 50%, transparent 70%);
+      opacity: 0;
+    }
+    .btn-outline:hover {
+      background: rgba(200, 169, 110, 0.1);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(200, 169, 110, 0.2);
+    }
+    .btn-outline:hover::after {
+      opacity: 1;
+      animation: shimmerSweep 0.6s ease forwards;
+    }
+
+    /* ── NAV LINKS ── */
+    .nav-link {
+      position: relative;
+      color: #C8A96E;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.3s, text-shadow 0.3s;
+      text-shadow: 0 0 8px rgba(200,169,110,0.15);
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: linear-gradient(90deg, #C8A96E, #D9BF8C);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover { color: #D9BF8C; text-shadow: 0 0 12px rgba(200,169,110,0.4); }
+    .nav-link:hover::after { width: 100%; }
+
+    /* ── STAT COUNTER ── */
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #C8A96E;
+    }
+
+    /* ── MENU ITEM ROW ── */
+    .menu-item-row {
+      display: flex;
+      flex-direction: column;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(200, 169, 110, 0.1);
+    }
+    .menu-item-row:last-child { border-bottom: none; }
+    .menu-item-top {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      width: 100%;
+    }
+    .menu-item-name {
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .menu-dots {
+      flex: 1;
+      height: 1px;
+      min-width: 20px;
+      background: linear-gradient(90deg, rgba(200,169,110,0.1), rgba(200,169,110,0.4), rgba(200,169,110,0.1));
+      background-size: 200% 100%;
+      animation: menuLineShimmer 3s ease infinite;
+    }
+    @keyframes menuLineShimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+    .menu-item-row:hover .menu-dots {
+      background: linear-gradient(90deg, rgba(200,169,110,0.2), rgba(200,169,110,0.6), rgba(200,169,110,0.2));
+      background-size: 200% 100%;
+    }
+
+    /* Vegetarian badge — green circle with white V */
+    .veg-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      background: #4a8c2a;
+      border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: 0 0 6px rgba(74,140,42,0.4);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.55rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+
+    /* ── TEXTURE BG ── */
+    .texture-bg {
+      background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C8A96E' fill-opacity='0.03'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* ── SOCIAL ICON ── */
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(200, 169, 110, 0.3);
+      color: rgba(245, 240, 232, 0.6);
+      transition: border-color 0.3s, color 0.3s, background 0.3s, transform 0.2s;
+    }
+    .social-icon:hover {
+      border-color: #C8A96E;
+      color: #C8A96E;
+      background: rgba(200, 169, 110, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* ── HAMBURGER ── */
+    .ham-line {
+      display: block;
+      width: 24px; height: 2px;
+      background: #F5F0E8;
+      transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    #hamburger.open .ham-line:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    #hamburger.open .ham-line:nth-child(2) { opacity: 0; }
+    #hamburger.open .ham-line:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ── BACK TO TOP ── */
+    #back-to-top {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s, transform 0.3s;
+      pointer-events: none;
+    }
+    #back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    /* ── PRICING CARD SIZES ── */
+    .price-tier-1 { transform: scale(0.92); transform-origin: bottom center; }
+    .price-tier-2 { transform: scale(1.02); }
+    .price-tier-3 { transform: scale(1.05); transform-origin: bottom center; }
+    .price-tier-1:hover { transform: scale(0.98) translateY(-6px); }
+    .price-tier-2:hover { transform: scale(1.03) translateY(-8px); }
+    .price-tier-3:hover { transform: scale(1.08) translateY(-10px); }
+
+    @keyframes cardGlow {
+      0%, 100% { box-shadow: 0 0 20px rgba(200,169,110,0.05); }
+      50% { box-shadow: 0 0 40px rgba(200,169,110,0.15), 0 0 80px rgba(200,169,110,0.05); }
+    }
+    .pricing-card { animation: cardGlow 4s ease-in-out infinite; }
+    .pricing-card-featured { animation: cardGlow 3s ease-in-out infinite, badgePulse 2.2s ease-in-out infinite; }
+
+    /* ── WATERMARK ── */
+    .wm-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #C8A96E;
+      letter-spacing: 0.1em;
+      user-select: none;
+    }
+    @keyframes wmGlowSweep {
+      0% { background-position: -100% 0; }
+      50% { background-position: 200% 0; }
+      100% { background-position: -100% 0; }
+    }
+
+    /* ── ACCESSIBILITY ── */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #C8A96E;
+      outline-offset: 3px;
+    }
+
+    /* ── LIGHTBOX NAV ── */
+    .lb-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(200, 169, 110, 0.15);
+      border: 1px solid rgba(200, 169, 110, 0.4);
+      color: #C8A96E;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 1.2rem;
+    }
+    .lb-nav:hover { background: rgba(200, 169, 110, 0.3); }
+
+    /* ── MOBILE SCROLL SNAP ── */
+    @media (max-width: 768px) {
+      .dishes-scroll {
+        display: flex;
+        overflow-x: auto;
+        gap: 16px;
+        padding-bottom: 16px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .dishes-scroll::-webkit-scrollbar { display: none; }
+      .dish-snap {
+        flex: 0 0 280px;
+        scroll-snap-align: start;
+      }
+    }
+
+    /* ── MOBILE FIXES ── */
+    @media (max-width: 768px) {
+      /* Hero buttons — compact on mobile */
+      #home .btn-outline, #home .btn-gold {
+        padding: 8px 16px !important;
+        font-size: 0.78rem !important;
+      }
+
+      /* Packages: ALWAYS side by side */
+      .grid.items-end {
+        display: flex !important;
+        gap: 6px !important;
+        align-items: flex-end !important;
+        overflow: visible !important;
+      }
+      .grid.items-end > div {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        overflow: visible !important;
+      }
+      .price-tier-1 {
+        transform: none !important;
+        padding: 14px 8px !important;
+        min-height: 340px !important;
+      }
+      .price-tier-2 {
+        transform: none !important;
+        padding: 16px 8px !important;
+        min-height: 410px !important;
+      }
+      .price-tier-3 {
+        transform: none !important;
+        padding: 18px 8px !important;
+        min-height: 420px !important;
+      }
+      .pricing-card .font-playfair {
+        font-size: 1.3rem !important;
+      }
+      .pricing-card .font-inter {
+        font-size: 0.6rem !important;
+      }
+      .pricing-card ul li {
+        font-size: 0.6rem !important;
+        padding: 3px 0 !important;
+      }
+      .pricing-card ul li span {
+        margin-right: 4px !important;
+      }
+      .pricing-card .btn-gold, .pricing-card .btn-outline {
+        padding: 7px 6px !important;
+        font-size: 0.55rem !important;
+      }
+      .best-value-badge, [style*="ALL-INCLUSIVE"] {
+        font-size: 0.45rem !important;
+        padding: 2px 8px !important;
+        top: -10px !important;
+      }
+
+      /* Menu items: tighter on mobile */
+      .menu-item-row {
+        padding: 10px 0 !important;
+        gap: 8px !important;
+      }
+      .menu-item-row .font-playfair {
+        font-size: 0.95rem !important;
+        display: inline !important;
+      }
+      .veg-badge {
+        width: 14px !important;
+        height: 14px !important;
+        font-size: 0.5rem !important;
+      }
+      .menu-item-row .font-inter.text-xs {
+        font-size: 0.7rem !important;
+        line-height: 1.3 !important;
+        margin-top: 2px !important;
+      }
+      .menu-section {
+        padding: 20px 16px !important;
+        margin-bottom: 12px !important;
+      }
+      .menu-section h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 12px !important;
+      }
+      .menu-dots {
+        min-width: 20px !important;
+      }
+
+      /* Menu filter tabs: scrollable, no cutoff */
+      #menu-filters-wrap {
+        padding: 6px 8px !important;
+      }
+      #menu-filters {
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      #menu-filters::-webkit-scrollbar { display: none; }
+      #menu-filters .tab-btn {
+        padding: 5px 8px !important;
+        font-size: 0.58rem !important;
+        flex-shrink: 0 !important;
+        letter-spacing: 0.02em !important;
+      }
+
+      /* Watermark smaller on mobile */
+      .wm-text {
+        font-size: 1.5rem !important;
+      }
+      .wm-grid {
+        gap: 30px 40px !important;
+      }
+
+      /* Monthly add-ons: side by side, no overflow */
+      .grid.max-w-3xl {
+        display: flex !important;
+        gap: 6px !important;
+        overflow: visible !important;
+      }
+      .grid.max-w-3xl > div {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        padding: 14px 10px !important;
+        padding: 16px 12px !important;
+      }
+      .grid.max-w-3xl ul li {
+        font-size: 0.7rem !important;
+        padding: 4px 0 !important;
+      }
+    }
+
+    /* ── BUTTON SHINE ANIMATION ── */
+    @keyframes btnShine {
+      0% { background-position: 200% center; }
+      100% { background-position: -200% center; }
+    }
+
+    .btn-gold {
+      animation: btnShine 4s ease infinite;
+    }
+    .btn-gold:hover {
+      animation: btnShine 1.5s ease infinite;
+    }
+
+    /* ── BEST VALUE BADGE PULSE ── */
+    @keyframes badgePulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(200,169,110,0.5), 0 2px 8px rgba(200,169,110,0.4); }
+      50% { box-shadow: 0 0 0 6px rgba(200,169,110,0.0), 0 2px 20px rgba(200,169,110,0.7); }
+    }
+    .best-value-badge {
+      animation: badgePulse 2.2s ease-in-out infinite;
+    }
+
+    /* ── PRICING CARD TILT ── */
+    .pricing-card {
+      transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease, border-color 0.3s ease;
+    }
+    .pricing-card:hover {
+      transform: perspective(800px) rotateY(2deg) translateY(-8px);
+    }
+    .pricing-card-featured:hover {
+      transform: perspective(800px) rotateY(-2deg) translateY(-10px);
+    }
+
+    /* ── GALLERY GRADIENT OVERLAY ANIMATION ── */
+    @keyframes galleryWarmShift {
+      0% { opacity: 0.04; background-position: 0% 50%; }
+      50% { opacity: 0.08; background-position: 100% 50%; }
+      100% { opacity: 0.04; background-position: 0% 50%; }
+    }
+    .gallery-warm-overlay {
+      position: absolute;
+      inset: -20px;
+      pointer-events: none;
+      z-index: 0;
+      background: linear-gradient(135deg, rgba(200,130,50,0.12) 0%, rgba(220,170,80,0.08) 30%, rgba(180,100,30,0.1) 60%, rgba(200,150,60,0.12) 100%);
+      background-size: 300% 300%;
+      animation: galleryWarmShift 8s ease infinite;
+      border-radius: 12px;
+    }
+
+    /* ── ABOUT PARALLAX IMAGES ── */
+    .about-img-wrap {
+      will-change: transform;
+    }
+
+    /* ── MENU ITEM STAGGER ── */
+    .menu-item-row.item-hidden {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    .menu-item-row.item-visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    /* ── GALLERY GLASS WAVE ANIMATION ── */
+    @keyframes glassWave {
+      0%, 100% { transform: scale(1); filter: brightness(1); }
+      50% { transform: scale(1.02); filter: brightness(1.05); }
+    }
+    .gallery-item img {
+      animation: glassWave 6s ease-in-out infinite;
+    }
+    .gallery-item:nth-child(2) img { animation-delay: 0.5s; }
+    .gallery-item:nth-child(3) img { animation-delay: 1s; }
+    .gallery-item:nth-child(4) img { animation-delay: 1.5s; }
+    .gallery-item:nth-child(5) img { animation-delay: 2s; }
+    .gallery-item:nth-child(6) img { animation-delay: 2.5s; }
+    .gallery-item:nth-child(7) img { animation-delay: 3s; }
+    .gallery-item:nth-child(8) img { animation-delay: 3.5s; }
+
+    /* ── STAR SHINE ANIMATION ── */
+    @keyframes starShine {
+      0% { color: rgba(200,169,110,0.5); transform: scale(1); filter: drop-shadow(0 0 0px transparent); }
+      50% { color: #D9BF8C; transform: scale(1.15); filter: drop-shadow(0 0 8px rgba(200,169,110,0.8)); }
+      100% { color: rgba(200,169,110,0.5); transform: scale(1); filter: drop-shadow(0 0 0px transparent); }
+    }
+    .star-shine { animation: starShine 2s ease-in-out infinite; display: inline-block; }
+
+    /* ── FOOTER MOBILE COMPACT ── */
+    @media (max-width: 768px) {
+      footer .grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 16px !important;
+      }
+      footer .grid > div:first-child {
+        grid-column: 1 / -1;
+      }
+      footer .grid > div {
+        margin-bottom: 0 !important;
+      }
+      footer a {
+        padding: 1px 0 !important;
+        font-size: 0.75rem !important;
+        line-height: 1.6 !important;
+      }
+      footer p {
+        font-size: 0.75rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 2px !important;
+      }
+      footer .social-icon {
+        width: 32px !important;
+        height: 32px !important;
+      }
+      footer h4 {
+        font-size: 0.65rem !important;
+        margin-bottom: 8px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="demo-watermark" style="position:fixed; inset:0; z-index:40; pointer-events:none; overflow:hidden; transition: opacity 0.5s ease; opacity:0.12;">
+  <div style="position:absolute; top:-50%; left:-50%; width:200%; height:200%; transform:rotate(-30deg); display:flex; flex-wrap:wrap; align-content:center; justify-content:center; gap:50px 70px;" class="wm-grid">
+    <span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span>
+    <span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span>
+    <span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span>
+    <span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span>
+    <span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span>
+    <span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span>
+    <span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span>
+    <span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span>
+    <span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span>
+    <span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span><span class="wm-text">DEMO</span>
+  </div>
+  <!-- Gold glow sweep -->
+  <div style="position:absolute; inset:0; background:linear-gradient(120deg, transparent 0%, transparent 40%, rgba(200,169,110,0.08) 50%, transparent 60%, transparent 100%); background-size:200% 100%; animation: wmGlowSweep 4s ease-in-out infinite;"></div>
+</div>
+
+<!-- Loading Overlay -->
+<div id="loading-overlay" role="status" aria-label="Loading">
+  <div class="loading-inner">
+    <div class="loading-logo-wrap">
+      <img src="images/food/CRAVE-WHITE-768x325.png"
+           alt="Crave Mediterranean Grill"
+           style="width:180px; filter: brightness(0.95);" />
+    </div>
+    <div class="loading-line-track">
+      <div class="loading-line-fill"></div>
+    </div>
+    <div class="loading-tagline" id="loading-tagline" aria-hidden="true"></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header id="header" class="fixed top-0 left-0 right-0 z-50 px-6 py-4" role="banner">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between" aria-label="Main navigation">
+    <a href="#home" class="flex-shrink-0" aria-label="Crave Mediterranean Grill - Home">
+      <img src="images/food/CRAVE-WHITE-768x325.png"
+           alt="Crave Mediterranean Grill logo"
+           style="height:36px; width:auto; filter: brightness(0.95);"
+           loading="eager" />
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#menu" class="nav-link">Menu</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <div class="hidden md:block">
+      <a href="https://www.grubhub.com/restaurant/2140130" target="_blank" rel="noopener" class="btn-gold text-sm py-3 px-6" style="box-shadow: 0 4px 20px rgba(200,169,110,0.4), inset 0 1px 0 rgba(255,255,255,0.15);">
+        Order Now
+      </a>
+    </div>
+    <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2 -mr-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Menu Backdrop -->
+<div id="mobile-backdrop" style="position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:39; opacity:0; pointer-events:none; transition:opacity 0.3s;"></div>
+<!-- Mobile Menu Panel -->
+<div id="mobile-menu" class="fixed z-40 flex flex-col" style="top:0; right:0; bottom:0; width:65%; max-width:300px; background:rgba(13,13,13,0.97); backdrop-filter:blur(24px); border-left:1px solid rgba(200,169,110,0.15); box-shadow:-10px 0 40px rgba(0,0,0,0.5);" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <div class="flex items-center justify-between px-6 py-4" style="border-bottom:1px solid rgba(200,169,110,0.15);">
+    <img src="images/food/CRAVE-WHITE-768x325.png"
+         alt="Crave Mediterranean Grill"
+         style="height:32px; width:auto;" />
+  </div>
+  <nav class="flex flex-col justify-center flex-1 px-8 gap-6" aria-label="Mobile navigation">
+    <a href="#home" class="mobile-nav-link font-playfair text-xl font-medium text-cream" style="letter-spacing:0.02em; transition: color 0.2s; text-decoration:none;">Home</a>
+    <a href="#about" class="mobile-nav-link font-playfair text-xl font-medium text-cream" style="letter-spacing:0.02em; transition: color 0.2s; text-decoration:none;">About</a>
+    <a href="#menu" class="mobile-nav-link font-playfair text-xl font-medium text-cream" style="letter-spacing:0.02em; transition: color 0.2s; text-decoration:none;">Menu</a>
+    <a href="#gallery" class="mobile-nav-link font-playfair text-xl font-medium text-cream" style="letter-spacing:0.02em; transition: color 0.2s; text-decoration:none;">Gallery</a>
+    <a href="#contact" class="mobile-nav-link font-playfair text-xl font-medium text-cream" style="letter-spacing:0.02em; transition: color 0.2s; text-decoration:none;">Contact</a>
+  </nav>
+  <div class="px-8 pb-12" style="display:flex; flex-direction:column; gap:10px;">
+    <a href="https://www.grubhub.com/restaurant/2140130" target="_blank" rel="noopener" class="btn-gold text-sm" style="padding:12px 16px; display:flex; align-items:center; justify-content:center; gap:8px; text-decoration:none;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0;"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m0 0h6m0 0l2-5"/></svg>
+      Order Now
+    </a>
+    <a href="tel:7203798465" class="btn-outline text-sm" style="padding:12px 16px; display:flex; align-items:center; justify-content:center; gap:8px; text-decoration:none;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12 19.79 19.79 0 01.01 3.38a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.72a16 16 0 006.37 6.37l1.69-1.69a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      (720) 379-8465
+    </a>
+  </div>
+</div>
+
+<!-- 1. HERO SECTION -->
+<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero section">
+  <!-- Background image with parallax -->
+  <div id="hero-bg" class="absolute inset-0 w-full" style="height:120%;">
+    <img src="images/food/meat-lover.jpg"
+         alt="Crave Mediterranean Grill - Wood-fired Mediterranean dishes"
+         class="w-full h-full object-cover object-center"
+         loading="eager" />
+  </div>
+  <!-- Gradient overlay -->
+  <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(13,13,13,0.65) 0%, rgba(13,13,13,0.45) 40%, rgba(13,13,13,0.75) 100%);"></div>
+
+  <!-- Floating particles -->
+  <div id="hero-particles" aria-hidden="true"></div>
+
+  <!-- Hero content -->
+  <div class="relative z-10 text-center px-6 max-w-4xl mx-auto" style="margin-top:40px;">
+    <h1 class="hero-el" style="animation-delay:0.2s;">
+      <img src="images/crave-logo-hero.png" alt="Crave Mediterranean Grill" style="max-width:min(600px, 85vw); height:auto; margin:0 auto; filter:drop-shadow(0 4px 30px rgba(0,0,0,0.5));" />
+    </h1>
+
+    <p class="mt-8 text-cream font-inter hero-el" style="font-size:clamp(1rem, 2.2vw, 1.2rem); letter-spacing:0.06em; color:rgba(245,240,232,0.85); font-style:italic; animation-delay:0.5s;">
+      Family recipes. Fresh ingredients. Warm smiles.
+    </p>
+
+    <div class="flex flex-row flex-wrap gap-3 justify-center mt-10 hero-el" style="animation-delay:0.7s;">
+      <a href="#menu" class="btn-outline" style="padding:10px 24px; font-size:0.85rem;">View Our Menu</a>
+      <a href="https://www.grubhub.com/restaurant/2140130" target="_blank" rel="noopener" class="btn-gold" style="padding:10px 24px; font-size:0.85rem;">
+        Order Delivery
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator absolute bottom-8 left-1/2 flex flex-col items-center gap-2" style="transform:translateX(-50%);" aria-hidden="true">
+    <span class="text-gold text-xs uppercase tracking-widest font-inter" style="opacity:0.6;">Scroll</span>
+    <svg width="18" height="24" viewBox="0 0 18 24" fill="none" style="color:#C8A96E;">
+      <rect x="1" y="1" width="16" height="22" rx="8" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="9" cy="8" r="2.5" fill="currentColor">
+        <animate attributeName="cy" values="8;14;8" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider py-6 px-6" aria-hidden="true">
+  <div class="section-divider-line"></div>
+  <span class="section-divider-ornament">&#10022; &#10022; &#10022;</span>
+  <div class="section-divider-line"></div>
+</div>
+
+<!-- 2. ABOUT SECTION -->
+<section id="about" class="py-28 px-6 relative overflow-hidden" aria-label="About Crave Mediterranean Grill">
+  <div class="absolute inset-0" style="z-index:0;">
+    <img src="images/food/greek-salad-768x432.jpg" alt="" class="w-full h-full object-cover" style="filter:brightness(0.18) saturate(0.35) blur(2px); opacity:0.55;" loading="lazy" aria-hidden="true" />
+  </div>
+  <div class="absolute inset-0" style="z-index:0; background:linear-gradient(180deg, #0D0D0D 0%, rgba(13,13,13,0.5) 25%, rgba(13,13,13,0.5) 75%, #0D0D0D 100%);"></div>
+  <div class="max-w-7xl mx-auto relative" style="z-index:1;">
+    <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <!-- Text -->
+      <div class="reveal slide-left">
+        <div class="gold-line">
+          <p class="font-inter uppercase tracking-widest text-gold" style="font-size:0.8rem; letter-spacing:0.15em; margin-bottom:12px;">Our Heritage</p>
+        </div>
+        <h2 class="font-playfair text-cream" style="font-size:clamp(2rem, 4vw, 2.75rem); line-height:1.2; font-weight:600;">Our Story</h2>
+
+        <p class="mt-6 font-inter" style="color:rgba(245,240,232,0.75); line-height:1.8; font-size:1rem;">
+          Crave Mediterranean Grill is a family-owned restaurant in the heart of Glendale, Colorado, bringing over 20 years of Mediterranean and Lebanese culinary tradition to the Denver metro area. Every dish starts with the freshest ingredients and our treasured family recipes — from hand-rolled grape leaves to wood-fired pies and slow-marinated kabobs.
+        </p>
+        <p class="mt-4 font-inter" style="color:rgba(245,240,232,0.75); line-height:1.8; font-size:1rem;">
+          We don't just serve food. We share a piece of our heritage with every plate.
+        </p>
+
+        <div class="mt-10 flex gap-8 pt-8" style="border-top:1px solid rgba(200,169,110,0.2);">
+          <div class="text-center">
+            <div class="stat-num" data-target="20" id="stat-years">0</div>
+            <p class="font-inter text-xs uppercase tracking-widest mt-1" style="color:rgba(245,240,232,0.5); letter-spacing:0.1em;">Years</p>
+          </div>
+          <div style="width:1px; background:rgba(200,169,110,0.2);"></div>
+          <div class="text-center">
+            <div class="stat-num font-playfair" style="color:#C8A96E;">Family</div>
+            <p class="font-inter text-xs uppercase tracking-widest mt-1" style="color:rgba(245,240,232,0.5); letter-spacing:0.1em;">Recipes</p>
+          </div>
+          <div style="width:1px; background:rgba(200,169,110,0.2);"></div>
+          <div class="text-center">
+            <div class="stat-num font-playfair" style="color:#C8A96E;">Fresh</div>
+            <p class="font-inter text-xs uppercase tracking-widest mt-1" style="color:rgba(245,240,232,0.5); letter-spacing:0.1em;">Daily</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="reveal slide-right about-img-wrap" style="position:relative; padding-bottom:80px;">
+        <div style="position:absolute; top:-16px; left:-16px; right:16px; bottom:96px; border:1px solid rgba(200,169,110,0.2); border-radius:12px; pointer-events:none; z-index:0;"></div>
+        <img src="images/food/hum-baba-muh.jpg"
+             alt="Hummus and baba ghanouj - Crave Mediterranean Grill appetizer spread"
+             class="w-full object-cover rounded-xl"
+             style="height:400px; position:relative; z-index:2;"
+             loading="lazy" />
+        <!-- Second overlapping image -->
+        <div style="position:absolute; bottom:0; right:-24px; width:65%; z-index:3; border:3px solid #C8A96E; border-radius:10px; overflow:hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(200,169,110,0.2);">
+          <img src="images/food/chk-kabob-1-768x432.jpg"
+               alt="Grilled chicken kabob - Crave Mediterranean Grill"
+               style="width:100%; height:180px; object-fit:cover; display:block;"
+               loading="lazy" />
+        </div>
+        <div style="position:absolute; bottom:20px; left:-12px; width:60px; height:60px; border:2px solid rgba(200,169,110,0.5); border-radius:8px; z-index:1;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider py-4 px-6" aria-hidden="true">
+  <div class="section-divider-line"></div>
+  <span class="section-divider-ornament">&#10022;</span>
+  <div class="section-divider-line"></div>
+</div>
+
+<!-- 3. FEATURED DISHES -->
+<div id="menu" style="position:relative; top:-80px;"></div>
+<section id="dishes" class="py-28 px-6" style="background:linear-gradient(180deg, #0f0e0c 0%, #16140f 50%, #0f0e0c 100%);" aria-label="Signature dishes">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14 reveal">
+      <p class="font-inter uppercase tracking-widest text-gold mb-3" style="font-size:0.8rem; letter-spacing:0.15em;">From Our Kitchen</p>
+      <h2 class="font-playfair text-cream" style="font-size:clamp(2rem, 4vw, 2.75rem); font-weight:600;">Signature Dishes</h2>
+      <div class="flex items-center justify-center gap-4 mt-4">
+        <div style="width:30px; height:1px; background:rgba(200,169,110,0.4);"></div>
+        <div style="width:6px; height:6px; background:#C8A96E; border-radius:50%;"></div>
+        <div style="width:30px; height:1px; background:rgba(200,169,110,0.4);"></div>
+      </div>
+    </div>
+
+    <!-- Dish Carousel — shows 3, slides 1 at a time -->
+    <div id="dish-carousel" style="position:relative; overflow:hidden;">
+      <div id="dish-track" style="display:flex; transition: transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);">
+
+        <div class="dish-slide"><div class="dish-card" style="height:340px;"><img src="images/food/hum-baba-muh-1.jpg" alt="Hummus with tahini, paprika, and olive oil" loading="lazy" /><span class="price-badge">$9</span><div class="dish-card-glass"><h3 class="font-playfair text-cream font-semibold" style="font-size:1.15rem;">Hummus</h3><p class="dish-card-desc mt-1">Pureed chickpeas, tahini, lemon juice, topped with paprika and olive oil</p></div></div></div>
+
+        <div class="dish-slide"><div class="dish-card" style="height:340px;"><img src="images/food/chk-kabob-1-768x432.jpg" alt="Grilled chicken kabob" loading="lazy" /><span class="price-badge">$22</span><div class="dish-card-glass"><h3 class="font-playfair text-cream font-semibold" style="font-size:1.15rem;">Chicken Kabob</h3><p class="dish-card-desc mt-1">Grilled white meat chicken marinated in lemon pepper, olive oil, and spices</p></div></div></div>
+
+        <div class="dish-slide"><div class="dish-card" style="height:340px;"><img src="images/food/meat-lover-768x432.jpg" alt="Slow-baked lamb shank" loading="lazy" /><span class="price-badge">$28</span><div class="dish-card-glass"><h3 class="font-playfair text-cream font-semibold" style="font-size:1.15rem;">Lamb Shank</h3><p class="dish-card-desc mt-1">Tender bone-in lamb slowly baked in savory tomato sauce</p></div></div></div>
+
+        <div class="dish-slide"><div class="dish-card" style="height:340px;"><img src="images/food/vegi-lover-768x432.jpg" alt="Vegetarian combo platter" loading="lazy" /><span class="price-badge">$18</span><div class="dish-card-glass"><h3 class="font-playfair text-cream font-semibold" style="font-size:1.15rem;">Vegetarian Combo</h3><p class="dish-card-desc mt-1">Hummus, baba ghanouj, tabbouleh, falafel, and grape leaves</p></div></div></div>
+
+        <div class="dish-slide"><div class="dish-card" style="height:340px;"><img src="images/food/drinks-768x432.jpg" alt="Fresh Mediterranean drinks" loading="lazy" /><span class="price-badge">$3-6</span><div class="dish-card-glass"><h3 class="font-playfair text-cream font-semibold" style="font-size:1.15rem;">Fresh Drinks</h3><p class="dish-card-desc mt-1">Mint lemonade, Turkish coffee, mango lassi, and more</p></div></div></div>
+
+        <div class="dish-slide"><div class="dish-card" style="height:340px;"><img src="images/food/greek-salad-768x432.jpg" alt="Fresh Greek salad" loading="lazy" /><span class="price-badge">$10</span><div class="dish-card-glass"><h3 class="font-playfair text-cream font-semibold" style="font-size:1.15rem;">Greek Salad</h3><p class="dish-card-desc mt-1">Fresh romaine, tomatoes, cucumbers, olives, and feta</p></div></div></div>
+
+        <div class="dish-slide"><div class="dish-card" style="height:340px;"><img src="images/food/lentil-soup.jpg" alt="Traditional lentil soup" loading="lazy" /><span class="price-badge">$6</span><div class="dish-card-glass"><h3 class="font-playfair text-cream font-semibold" style="font-size:1.15rem;">Lentil Soup</h3><p class="dish-card-desc mt-1">Traditional Lebanese lentil soup with onions, parsley, and carrots</p></div></div></div>
+
+        <div class="dish-slide"><div class="dish-card" style="height:340px;"><img src="images/food/baklava-768x432.jpg" alt="Traditional baklava" loading="lazy" /><span class="price-badge">$7</span><div class="dish-card-glass"><h3 class="font-playfair text-cream font-semibold" style="font-size:1.15rem;">Baklava</h3><p class="dish-card-desc mt-1">Traditional layered pastry with pistachios, walnuts, and honey syrup</p></div></div></div>
+
+      </div>
+      <!-- Nav arrows -->
+      <button id="dish-prev" class="lb-nav" style="position:absolute; left:8px; top:50%; transform:translateY(-50%); z-index:5;" aria-label="Previous dishes">&#10094;</button>
+      <button id="dish-next" class="lb-nav" style="position:absolute; right:8px; top:50%; transform:translateY(-50%); z-index:5;" aria-label="Next dishes">&#10095;</button>
+    </div>
+
+    <!-- Call to order -->
+    <div class="text-center mt-10 mb-6 reveal">
+      <a href="tel:7203798465" style="display:inline-flex; align-items:center; gap:8px; color:rgba(200,169,110,0.6); font-family:Inter,sans-serif; font-size:0.8rem; text-decoration:none; transition:color 0.3s;" onmouseenter="this.style.color='#C8A96E'" onmouseleave="this.style.color='rgba(200,169,110,0.6)'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12 19.79 19.79 0 01.01 3.38a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.72a16 16 0 006.37 6.37l1.69-1.69a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Order by phone: (720) 379-8465
+      </a>
+    </div>
+
+    <!-- Menu filter tabs right below -->
+    <div>
+    <!-- Category Filter Tabs -->
+    <div class="reveal" style="background:rgba(200,169,110,0.06); backdrop-filter:blur(10px); border:1px solid rgba(200,169,110,0.15); border-radius:12px; padding:10px 12px; margin-bottom:2rem; display:inline-flex; width:100%; justify-content:center;" id="menu-filters-wrap">
+      <div class="flex justify-center gap-1.5 flex-nowrap overflow-x-auto" id="menu-filters" style="scrollbar-width:none; -webkit-overflow-scrolling:touch;">
+        <button class="tab-btn" data-category="all" style="padding:8px 14px; font-size:0.75rem; white-space:nowrap;">All</button>
+        <button class="tab-btn active" data-category="appetizers" style="padding:8px 14px; font-size:0.75rem; white-space:nowrap;">Appetizers</button>
+        <button class="tab-btn" data-category="pies" style="padding:8px 14px; font-size:0.75rem; white-space:nowrap;">Pies</button>
+        <button class="tab-btn" data-category="soups" style="padding:8px 14px; font-size:0.75rem; white-space:nowrap;">Soups & Salads</button>
+        <button class="tab-btn" data-category="sandwiches" style="padding:8px 14px; font-size:0.75rem; white-space:nowrap;">Sandwiches</button>
+        <button class="tab-btn" data-category="lunch" style="padding:8px 14px; font-size:0.75rem; white-space:nowrap;">Lunch</button>
+        <button class="tab-btn" data-category="entrees" style="padding:8px 14px; font-size:0.75rem; white-space:nowrap;">Entrees</button>
+        <button class="tab-btn" data-category="extras" style="padding:8px 14px; font-size:0.75rem; white-space:nowrap;">A La Carte & Sides</button>
+        <button class="tab-btn" data-category="desserts" style="padding:8px 14px; font-size:0.75rem; white-space:nowrap;">Desserts & Drinks</button>
+      </div>
+    </div>
+
+    <!-- APPETIZERS -->
+    <div class="menu-section reveal" data-section="appetizers" style="background:rgba(22,22,22,0.6); backdrop-filter:blur(8px); border:1px solid rgba(200,169,110,0.12); border-radius:16px; padding:32px 28px; margin-bottom:20px;">
+      <h3 class="font-playfair text-gold text-xl font-semibold mb-6" style="letter-spacing:0.04em;">Appetizers</h3>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Hummus</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Pureed chickpeas, tahini, lemon juice, topped with paprika and olive oil. Served with pita bread.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Homemade Grape Leaves</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Seasoned grape leaves rolled with rice and spices.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Grilled Shrimp</span><div class="menu-dots"></div><span class="menu-price">$17</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Two skewers of jumbo shrimp marinated in special spices and grilled.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Baba Ghanouj</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Pureed baked eggplant, tahini, pomegranate molasses, topped with sumac and olive oil.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Fried Kibbeh</span><div class="menu-dots"></div><span class="menu-price">$11</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Cracked bulgur wheat mixed with sirloin, stuffed with ground beef and chopped onions.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Falafel</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Fried chickpea patties mixed with herbs and spices. Served with tahini dipping sauce.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Muhamara</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Red bell pepper, onion, pomegranate molasses, and chili sauce. Served with pita bread.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Mediterranean Green Beans</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Green beans slowly simmered in tomatoes, garlic, olive oil, and Mediterranean spices.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Eggplant Salad</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Smoky eggplant mixed with chopped onion, tomatoes, garlic, mint, pomegranate sauce, and parsley.</p></div>
+    </div>
+
+    <!-- FRESH BAKED PIES -->
+    <div class="menu-section reveal" data-section="pies" style="background:rgba(22,22,22,0.6); backdrop-filter:blur(8px); border:1px solid rgba(200,169,110,0.12); border-radius:16px; padding:32px 28px; margin-bottom:20px;">
+      <h3 class="font-playfair text-gold text-xl font-semibold mb-6">Fresh Baked Pies</h3>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Cheese Pie</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Mozzarella cheese, olive oil, and spices spread on fresh baked dough.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Zaatar Pie</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Traditional Middle Eastern thyme on olive oil, fresh baked dough.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Meat Pie</span><div class="menu-dots"></div><span class="menu-price">$11</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Ground lamb with onion, tomatoes, and pomegranate molasses on fresh baked dough.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Spinach Pie</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Chopped spinach, onions, walnuts, pomegranate molasses, olive oil on fresh baked dough.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Muhamara Pie</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Red bell pepper, onions, pomegranate molasses, and chili sauce on fresh baked dough.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Sambousak</span><div class="menu-dots"></div><span class="menu-price">$10</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Three pastry filled with cheese or meat mixture.</p></div>
+    </div>
+
+    <!-- SOUPS & SALADS -->
+    <div class="menu-section reveal" data-section="soups" style="background:rgba(22,22,22,0.6); backdrop-filter:blur(8px); border:1px solid rgba(200,169,110,0.12); border-radius:16px; padding:32px 28px; margin-bottom:20px;">
+      <h3 class="font-playfair text-gold text-xl font-semibold mb-6">Soups & Salads</h3>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Lentil Soup</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$6</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Traditional Lebanese lentil soup with onions, parsley, and carrots.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Greek Salad</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$10</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Romaine with tomatoes, cucumbers, olives, feta, olive oil, vinegar, dry mint.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Tabbouleh Salad</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$10</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Finely chopped parsley, onions, tomatoes, bulgur wheat, lemon juice, olive oil.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Cucumber Yogurt</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$6</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Fresh yogurt with chopped cucumbers, dry mint, and salt.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Fattoush Salad</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Romaine with tomatoes, cucumbers, olives, pita chips, lemon juice, sumac.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Chirazi Salad</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$10</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Chopped onions, tomatoes, cucumbers, olive oil, lemon juice, dry mint.</p></div>
+    </div>
+
+    <!-- SANDWICHES -->
+    <div class="menu-section reveal" data-section="sandwiches" style="background:rgba(22,22,22,0.6); backdrop-filter:blur(8px); border:1px solid rgba(200,169,110,0.12); border-radius:16px; padding:32px 28px; margin-bottom:20px;">
+      <h3 class="font-playfair text-gold text-xl font-semibold mb-2">Sandwiches</h3>
+      <p class="font-inter text-xs mb-6" style="color:rgba(200,169,110,0.5); font-style:italic;">All sandwiches served in pita with lettuce and tomatoes</p>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Chicken Shawarma</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Marinated chicken on garlic paste, in pita with lettuce and tomatoes.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Falafel</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Chickpea patties on hummus with tahini, in pita.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Kobideh Kabob</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Grilled ground beef on hummus, in pita.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Kafta Kabob</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Grilled ground lamb with onions, parsley, on hummus, in pita.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Gyro</span><div class="menu-dots"></div><span class="menu-price">$9</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Rotisserie lamb and beef on tzatziki, in pita.</p></div>
+    </div>
+
+    <!-- LUNCH SPECIALS -->
+    <div class="menu-section reveal" data-section="lunch" style="background:rgba(22,22,22,0.6); backdrop-filter:blur(8px); border:1px solid rgba(200,169,110,0.12); border-radius:16px; padding:32px 28px; margin-bottom:20px;">
+      <h3 class="font-playfair text-gold text-xl font-semibold mb-2">Lunch Specials</h3>
+      <p class="font-inter text-xs mb-6" style="color:rgba(200,169,110,0.5); font-style:italic;">Served with rice and salad</p>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Beef Kabob</span><div class="menu-dots"></div><span class="menu-price">$17</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Grilled tenderloin with onions, peppers, and tomato.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Lamb Kabob</span><div class="menu-dots"></div><span class="menu-price">$15</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Grilled lamb with olive oil, garlic, Mediterranean spices.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Kobideh Kabob</span><div class="menu-dots"></div><span class="menu-price">$14</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Grilled ground lamb with parsley, peppers, grilled tomato.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Chicken Shawarma</span><div class="menu-dots"></div><span class="menu-price">$14</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Garlic and orange marinated sliced chicken with garlic paste.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Chicken Kabob</span><div class="menu-dots"></div><span class="menu-price">$14</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Grilled chicken breast with lemon pepper, olive oil, spices.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Kafta Kabob</span><div class="menu-dots"></div><span class="menu-price">$14</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Two skewers of ground lamb with onions, parsley, peppers.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Gyro</span><div class="menu-dots"></div><span class="menu-price">$14</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Rotisserie lamb and beef with tzatziki.</p></div>
+    </div>
+
+    <!-- ENTREES -->
+    <div class="menu-section reveal" data-section="entrees" style="background:rgba(22,22,22,0.6); backdrop-filter:blur(8px); border:1px solid rgba(200,169,110,0.12); border-radius:16px; padding:32px 28px; margin-bottom:20px;">
+      <h3 class="font-playfair text-gold text-xl font-semibold mb-2">Entrees</h3>
+      <p class="font-inter text-xs mb-6" style="color:rgba(200,169,110,0.5); font-style:italic;">Served with rice, salad, hummus, and pita bread</p>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Chicken Shawarma</span><div class="menu-dots"></div><span class="menu-price">$19</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Garlic and orange marinated chicken with garlic paste.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Hummus-Be-Shawarma</span><div class="menu-dots"></div><span class="menu-price">$21</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Hummus topped with gyro, chicken shawarma, or combo.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Lamb Shank</span><div class="menu-dots"></div><span class="menu-price">$28</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Bone-in lamb slowly baked in tomato sauce with carrots, potatoes.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Chicken Kabob</span><div class="menu-dots"></div><span class="menu-price">$22</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Two skewers grilled chicken with lemon pepper, olive oil, spices.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Gyro</span><div class="menu-dots"></div><span class="menu-price">$19</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Rotisserie lamb and beef with tzatziki.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Lamb Kabob</span><div class="menu-dots"></div><span class="menu-price">$25</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Two skewers grilled lamb with olive oil, garlic, Mediterranean spices.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Beef Kabob</span><div class="menu-dots"></div><span class="menu-price">$33</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Two skewers grilled tenderloin with peppers, onions, tomato.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Kafta Kabob</span><div class="menu-dots"></div><span class="menu-price">$21</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Three skewers ground lamb with onions, parsley, peppers.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Kabob Combo</span><div class="menu-dots"></div><span class="menu-price">$28</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Three-skewer combo: chicken, lamb, and kobideh.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Mix Grill Combo</span><div class="menu-dots"></div><span class="menu-price">$57</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Chicken, lamb, gyro, kafta — feeds two. Two salads and hummus.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Kobideh Kabob</span><div class="menu-dots"></div><span class="menu-price">$21</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Two skewers ground beef with onion, salt, paprika.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Lamb Chops</span><div class="menu-dots"></div><span class="menu-price">$35</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Grilled lamb rack strips with salt and pepper.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Vegetarian Combo</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$18</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Hummus, baba ghanouj, tabbouleh, fattoush, rice, falafel, grape leaves.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Falafel Plate</span><span class="veg-badge">V</span><div class="menu-dots"></div><span class="menu-price">$18</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Fried chickpea patties with herbs and spices. Served with tahini and choice of salad.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Surf &amp; Turf</span><div class="menu-dots"></div><span class="menu-price">$26</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">One skewer of jumbo shrimp and one skewer of beef kabob.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">King Combo</span><div class="menu-dots"></div><span class="menu-price">$122</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Two chicken kabobs, two lamb kabobs, gyro meat, four kafta skewers, six lamb chops, two skewers of grilled shrimp topped with muhamara, garlic and onions pie.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Friday &amp; Saturday Special</span><div class="menu-dots"></div><span class="menu-price">$30</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Ask your server for this week's special.</p></div>
+    </div>
+
+    <!-- A LA CARTE & SIDES -->
+    <div class="menu-section reveal" data-section="extras" style="background:rgba(22,22,22,0.6); backdrop-filter:blur(8px); border:1px solid rgba(200,169,110,0.12); border-radius:16px; padding:32px 28px; margin-bottom:20px;">
+      <h3 class="font-playfair text-gold text-xl font-semibold mb-2">A La Carte</h3>
+      <p class="font-inter text-xs mb-5" style="color:rgba(200,169,110,0.5); font-style:italic;">Served with grilled veggies</p>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Chicken Shawarma</span><div class="menu-dots"></div><span class="menu-price">$8</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Thinly sliced marinated chicken.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Gyro</span><div class="menu-dots"></div><span class="menu-price">$8</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Rotisserie spiced lamb and beef.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Beef Kabob</span><div class="menu-dots"></div><span class="menu-price">$13</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Grilled tenderloin in olive oil and salt.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Chicken Kabob</span><div class="menu-dots"></div><span class="menu-price">$10</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Grilled white meat with lemon pepper.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Lamb Kabob</span><div class="menu-dots"></div><span class="menu-price">$12</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Grilled lamb with garlic and Mediterranean spices.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Kobideh Kabob</span><div class="menu-dots"></div><span class="menu-price">$7</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Ground beef with onion, salt, and paprika.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Kafta Kabob</span><div class="menu-dots"></div><span class="menu-price">$6</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Ground lamb with onions, parsley, and peppers.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Lamb Chops</span><div class="menu-dots"></div><span class="menu-price">$6</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Grilled rack strips with salt and pepper.</p></div>
+      <div style="height:1px; background:rgba(200,169,110,0.15); margin:20px 0;"></div>
+      <h3 class="font-playfair text-gold text-xl font-semibold mb-6">Sides</h3>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">House Salad</span><div class="menu-dots"></div><span class="menu-price">$7</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Fresh mixed greens with house dressing.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Rice</span><div class="menu-dots"></div><span class="menu-price">$5</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Seasoned basmati rice.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">French Fries</span><div class="menu-dots"></div><span class="menu-price">$4</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Golden crispy fries.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Garlic Paste</span><div class="menu-dots"></div><span class="menu-price">$5</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">House-made creamy garlic spread.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Tzatziki</span><div class="menu-dots"></div><span class="menu-price">$5</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Cool yogurt with cucumber and herbs.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Feta Cheese</span><div class="menu-dots"></div><span class="menu-price">$5</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Crumbled Mediterranean feta.</p></div>
+    </div>
+
+    <!-- DESSERTS & DRINKS -->
+    <div class="menu-section reveal" data-section="desserts" style="background:rgba(22,22,22,0.6); backdrop-filter:blur(8px); border:1px solid rgba(200,169,110,0.12); border-radius:16px; padding:32px 28px; margin-bottom:20px;">
+      <h3 class="font-playfair text-gold text-xl font-semibold mb-6">Desserts</h3>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Baklava with Walnuts</span><div class="menu-dots"></div><span class="menu-price">$4</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Layered phyllo pastry with walnuts and honey syrup.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Cheese Kenafe</span><div class="menu-dots"></div><span class="menu-price">$4</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Shredded phyllo with sweet cheese, baked golden and served warm.</p></div>
+      <div style="height:1px; background:rgba(200,169,110,0.15); margin:20px 0;"></div>
+      <h3 class="font-playfair text-gold text-xl font-semibold mb-6">Drinks</h3>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Soft Drinks</span><div class="menu-dots"></div><span class="menu-price">$3</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Coca-Cola, Sprite, Fanta, or ginger ale.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Fresh Juices</span><div class="menu-dots"></div><span class="menu-price">$7</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Orange, lemonade, strawberry, or mango.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Banana Milk</span><div class="menu-dots"></div><span class="menu-price">$7</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Blended fresh banana with cold milk.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Yogurt Drink</span><div class="menu-dots"></div><span class="menu-price">$6</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Traditional chilled yogurt with a pinch of salt.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Mint Tea</span><div class="menu-dots"></div><span class="menu-price">$3</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Fresh brewed with whole mint leaves.</p></div>
+      <div class="menu-item-row"><div class="menu-item-top"><span class="menu-item-name font-playfair text-cream font-medium" style="font-size:1.15rem;">Chai</span><div class="menu-dots"></div><span class="menu-price">$4</span></div><p class="font-inter text-xs mt-1" style="color:rgba(245,240,232,0.5);">Spiced black tea with cardamom.</p></div>
+    </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 6. GALLERY — right after menu -->
+<section id="gallery" class="py-6 px-6" style="background:linear-gradient(180deg, #0f0e0c 0%, #141210 50%, #0f0e0c 100%);" aria-label="Photo gallery">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-4 reveal">
+      <p class="font-inter uppercase tracking-widest text-gold mb-2" style="font-size:0.75rem; letter-spacing:0.15em;">Visual Feast</p>
+      <h2 class="font-playfair text-cream" style="font-size:clamp(1.6rem, 3.5vw, 2.2rem); font-weight:600;">A Glimpse Inside</h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 reveal" style="position:relative;">
+      <div class="gallery-warm-overlay" aria-hidden="true"></div>
+      <div class="gallery-item" style="height:220px;" data-src="images/food/baklava-768x432.jpg" data-alt="Baklava" role="button" tabindex="0" aria-label="View baklava photo"><img src="images/food/baklava-768x432.jpg" alt="Baklava" loading="lazy" style="height:100%;" /></div>
+      <div class="gallery-item" style="height:220px;" data-src="images/food/hum-baba-muh-1.jpg" data-alt="Hummus" role="button" tabindex="0" aria-label="View hummus photo"><img src="images/food/hum-baba-muh-1.jpg" alt="Hummus platter" loading="lazy" style="height:100%;" /></div>
+      <div class="gallery-item" style="height:220px;" data-src="images/food/chk-kabob-1-768x432.jpg" data-alt="Chicken kabob" role="button" tabindex="0" aria-label="View chicken kabob photo"><img src="images/food/chk-kabob-1-768x432.jpg" alt="Chicken kabob" loading="lazy" style="height:100%;" /></div>
+      <div class="gallery-item" style="height:220px;" data-src="images/food/vegi-lover-768x432.jpg" data-alt="Vegetarian platter" role="button" tabindex="0" aria-label="View vegetarian photo"><img src="images/food/vegi-lover-768x432.jpg" alt="Vegetarian combo" loading="lazy" style="height:100%;" /></div>
+      <div class="gallery-item" style="height:220px;" data-src="images/food/drinks-768x432.jpg" data-alt="Drinks" role="button" tabindex="0" aria-label="View drinks photo"><img src="images/food/drinks-768x432.jpg" alt="Drinks" loading="lazy" style="height:100%;" /></div>
+      <div class="gallery-item" style="height:220px;" data-src="images/food/meat-lover-768x432.jpg" data-alt="Lamb shank" role="button" tabindex="0" aria-label="View lamb photo"><img src="images/food/meat-lover-768x432.jpg" alt="Lamb shank" loading="lazy" style="height:100%;" /></div>
+      <div class="gallery-item" style="height:220px;" data-src="images/food/greek-salad-768x432.jpg" data-alt="Greek salad" role="button" tabindex="0" aria-label="View salad photo"><img src="images/food/greek-salad-768x432.jpg" alt="Greek salad" loading="lazy" style="height:100%;" /></div>
+      <div class="gallery-item" style="height:220px;" data-src="images/food/lentil-soup.jpg" data-alt="Lentil soup" role="button" tabindex="0" aria-label="View soup photo"><img src="images/food/lentil-soup.jpg" alt="Lentil soup" loading="lazy" style="height:100%;" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- Gold Divider — after gallery -->
+<div style="max-width:120px; margin:0 auto; height:1px; background:linear-gradient(90deg, transparent, rgba(200,169,110,0.3), transparent);"></div>
+
+<!-- TESTIMONIALS -->
+<section class="py-24 px-6 relative overflow-hidden" aria-label="Customer testimonials">
+  <div class="absolute inset-0" style="z-index:0;">
+    <img src="images/food/baklava-768x432.jpg" alt="" class="w-full h-full object-cover" style="filter:brightness(0.18) saturate(0.4) blur(2px); opacity:0.6;" loading="lazy" aria-hidden="true" />
+  </div>
+  <div class="absolute inset-0" style="z-index:0; background:linear-gradient(180deg, #0f0e0c 0%, rgba(15,14,12,0.45) 25%, rgba(15,14,12,0.45) 75%, #0f0e0c 100%);"></div>
+  <div class="max-w-4xl mx-auto relative" style="z-index:1;">
+    <div class="text-center mb-14 reveal">
+      <p class="font-inter uppercase tracking-widest text-gold mb-3" style="font-size:0.8rem; letter-spacing:0.15em;">Reviews</p>
+      <h2 class="font-playfair text-cream" style="font-size:clamp(2rem, 4vw, 2.75rem); font-weight:600;">What Our Guests Say</h2>
+    </div>
+
+    <div class="reveal" style="position:relative; overflow:hidden;">
+      <div aria-hidden="true" style="position:absolute; top:-10px; left:20px; font-family:'Playfair Display',serif; font-size:10rem; line-height:1; color:rgba(200,169,110,0.08); pointer-events:none; z-index:0; user-select:none;">&ldquo;</div>
+
+      <div style="overflow:hidden; position:relative; z-index:1;">
+        <div id="testimonial-track" class="testimonial-track flex">
+
+          <!-- Testimonial 1 -->
+          <div class="flex-none w-full px-4 md:px-8 text-center py-8" style="position:relative;">
+            <div style="position:absolute; inset:-40px; background:radial-gradient(ellipse at center, rgba(200,169,110,0.06) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
+            <div class="flex justify-center gap-1 mb-6" aria-label="5 out of 5 stars">
+              <span class="star-shine" style="animation-delay:0s;"><svg width="18" height="18" viewBox="0 0 18 18" fill="#C8A96E" aria-hidden="true"><path d="M9 1l2.2 6.7H18l-5.6 4 2.2 6.7L9 14.4 3.4 18.4l2.2-6.7L0 7.7h6.8z"/></svg></span>
+              <span class="star-shine" style="animation-delay:0.15s;"><svg width="18" height="18" viewBox="0 0 18 18" fill="#C8A96E" aria-hidden="true"><path d="M9 1l2.2 6.7H18l-5.6 4 2.2 6.7L9 14.4 3.4 18.4l2.2-6.7L0 7.7h6.8z"/></svg></span>
+              <span class="star-shine" style="animation-delay:0.3s;"><svg width="18" height="18" viewBox="0 0 18 18" fill="#C8A96E" aria-hidden="true"><path d="M9 1l2.2 6.7H18l-5.6 4 2.2 6.7L9 14.4 3.4 18.4l2.2-6.7L0 7.7h6.8z"/></svg></span>
+              <span class="star-shine" style="animation-delay:0.45s;"><svg width="18" height="18" viewBox="0 0 18 18" fill="#C8A96E" aria-hidden="true"><path d="M9 1l2.2 6.7H18l-5.6 4 2.2 6.7L9 14.4 3.4 18.4l2.2-6.7L0 7.7h6.8z"/></svg></span>
+              <span class="star-shine" style="animation-delay:0.6s;"><svg width="18" height="18" viewBox="0 0 18 18" fill="#C8A96E" aria-hidden="true"><path d="M9 1l2.2 6.7H18l-5.6 4 2.2 6.7L9 14.4 3.4 18.4l2.2-6.7L0 7.7h6.8z"/></svg></span>
+            </div>
+            <blockquote style="position:relative; z-index:1;">
+              <p class="font-playfair text-cream" style="font-size:clamp(1.1rem, 2.5vw, 1.35rem); line-height:1.7; font-style:italic;">
+                "Finally a place that provides fresh food made with high quality ingredients at a decent price."
+              </p>
+              <footer class="mt-6">
+                <cite class="font-inter text-gold font-medium not-italic" style="font-size:0.9rem; letter-spacing:0.05em;">— Jonathan Lee</cite>
+              </footer>
+            </blockquote>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="flex-none w-full px-4 md:px-8 text-center py-8" style="position:relative;">
+            <div style="position:absolute; inset:-40px; background:radial-gradient(ellipse at center, rgba(200,169,110,0.06) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
+            <div class="flex justify-center gap-1 mb-6" aria-label="5 out of 5 stars">
+              <span class="star-shine" style="animation-delay:0s;"><svg width="18" height="18" viewBox="0 0 18 18" fill="#C8A96E" aria-hidden="true"><path d="M9 1l2.2 6.7H18l-5.6 4 2.2 6.7L9 14.4 3.4 18.4l2.2-6.7L0 7.7h6.8z"/></svg></span>
+              <span class="star-shine" style="animation-delay:0.15s;"><svg width="18" height="18" viewBox="0 0 18 18" fill="#C8A96E" aria-hidden="true"><path d="M9 1l2.2 6.7H18l-5.6 4 2.2 6.7L9 14.4 3.4 18.4l2.2-6.7L0 7.7h6.8z"/></svg></span>
+              <span class="star-shine" style="animation-delay:0.3s;"><svg width="18" height="18" viewBox="0 0 18 18" fill="#C8A96E" aria-hidden="true"><path d="M9 1l2.2 6.7H18l-5.6 4 2.2 6.7L9 14.4 3.4 18.4l2.2-6.7L0 7.7h6.8z"/></svg></span>
+              <span class="star-shine" style="animation-delay:0.45s;"><svg width="18" height="18" viewBox="0 0 18 18" fill="#C8A96E" aria-hidden="true"><path d="M9 1l2.2 6.7H18l-5.6 4 2.2 6.7L9 14.4 3.4 18.4l2.2-6.7L0 7.7h6.8z"/></svg></span>
+              <span class="star-shine" style="animation-delay:0.6s;"><svg width="18" height="18" viewBox="0 0 18 18" fill="#C8A96E" aria-hidden="true"><path d="M9 1l2.2 6.7H18l-5.6 4 2.2 6.7L9 14.4 3.4 18.4l2.2-6.7L0 7.7h6.8z"/></svg></span>
+            </div>
+            <blockquote style="position:relative; z-index:1;">
+              <p class="font-playfair text-cream" style="font-size:clamp(1.1rem, 2.5vw, 1.35rem); line-height:1.7; font-style:italic;">
+                "Never have I had such amazing Mediterranean food! Everything was fresh, flavorful, and authentically prepared."
+              </p>
+              <footer class="mt-6">
+                <cite class="font-inter text-gold font-medium not-italic" style="font-size:0.9rem; letter-spacing:0.05em;">— Riya Prakash</cite>
+              </footer>
+            </blockquote>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="flex-none w-full px-4 md:px-8 text-center py-8" style="position:relative;">
+            <div style="position:absolute; inset:-40px; background:radial-gradient(ellipse at center, rgba(200,169,110,0.06) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
+            <div class="flex justify-center gap-1 mb-6" aria-label="5 out of 5 stars">
+              <span class="star-shine" style="animation-delay:0s;"><svg width="18" height="18" viewBox="0 0 18 18" fill="#C8A96E" aria-hidden="true"><path d="M9 1l2.2 6.7H18l-5.6 4 2.2 6.7L9 14.4 3.4 18.4l2.2-6.7L0 7.7h6.8z"/></svg></span>
+              <span class="star-shine" style="animation-delay:0.15s;"><svg width="18" height="18" viewBox="0 0 18 18" fill="#C8A96E" aria-hidden="true"><path d="M9 1l2.2 6.7H18l-5.6 4 2.2 6.7L9 14.4 3.4 18.4l2.2-6.7L0 7.7h6.8z"/></svg></span>
+              <span class="star-shine" style="animation-delay:0.3s;"><svg width="18" height="18" viewBox="0 0 18 18" fill="#C8A96E" aria-hidden="true"><path d="M9 1l2.2 6.7H18l-5.6 4 2.2 6.7L9 14.4 3.4 18.4l2.2-6.7L0 7.7h6.8z"/></svg></span>
+              <span class="star-shine" style="animation-delay:0.45s;"><svg width="18" height="18" viewBox="0 0 18 18" fill="#C8A96E" aria-hidden="true"><path d="M9 1l2.2 6.7H18l-5.6 4 2.2 6.7L9 14.4 3.4 18.4l2.2-6.7L0 7.7h6.8z"/></svg></span>
+              <span class="star-shine" style="animation-delay:0.6s;"><svg width="18" height="18" viewBox="0 0 18 18" fill="#C8A96E" aria-hidden="true"><path d="M9 1l2.2 6.7H18l-5.6 4 2.2 6.7L9 14.4 3.4 18.4l2.2-6.7L0 7.7h6.8z"/></svg></span>
+            </div>
+            <blockquote style="position:relative; z-index:1;">
+              <p class="font-playfair text-cream" style="font-size:clamp(1.1rem, 2.5vw, 1.35rem); line-height:1.7; font-style:italic;">
+                "The fresh baked pies are like nothing I've had before. This place is a true hidden gem in Denver."
+              </p>
+              <footer class="mt-6">
+                <cite class="font-inter text-gold font-medium not-italic" style="font-size:0.9rem; letter-spacing:0.05em;">— Michael Pios</cite>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Dots navigation -->
+      <div class="flex justify-center gap-3 mt-8" role="group" aria-label="Testimonial navigation">
+        <button class="dot active" data-slide="0" aria-label="View testimonial 1"></button>
+        <button class="dot" data-slide="1" aria-label="View testimonial 2"></button>
+        <button class="dot" data-slide="2" aria-label="View testimonial 3"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" style="position:fixed; inset:0; background:rgba(0,0,0,0.95); z-index:1000; display:none; align-items:center; justify-content:center;">
+  <button id="lb-close" aria-label="Close lightbox" style="position:absolute; top:20px; right:24px; background:none; border:none; color:rgba(245,240,232,0.7); font-size:2rem; cursor:pointer; line-height:1; transition:color 0.2s;">&times;</button>
+  <button id="lb-prev" class="lb-nav" style="left:16px;" aria-label="Previous image">&#8249;</button>
+  <img id="lb-img" src="" alt="" style="max-width:90vw; max-height:85vh; object-fit:contain; border-radius:4px;" />
+  <button id="lb-next" class="lb-nav" style="right:16px;" aria-label="Next image">&#8250;</button>
+  <div id="lb-caption" style="position:absolute; bottom:20px; left:50%; transform:translateX(-50%); color:rgba(245,240,232,0.6); font-family:'Inter',sans-serif; font-size:0.85rem; text-align:center; max-width:500px;"></div>
+</div>
+
+<!-- 7. ORDER + REVIEW — Interior photo background -->
+<section id="order" class="relative overflow-hidden" aria-label="Order and review section">
+  <!-- Interior photo background — crop top 25% by shifting object-position -->
+  <div class="absolute inset-0" style="z-index:0;">
+    <img src="images/crave-interior.webp" alt="" class="w-full h-full object-cover" style="object-position: center 75%; filter: brightness(0.3) saturate(0.7);" loading="lazy" aria-hidden="true" />
+  </div>
+  <!-- Gradient overlays for smooth blending with adjacent sections -->
+  <div class="absolute inset-0" style="z-index:1; background: linear-gradient(to bottom, #0D0D0D 0%, rgba(13,13,13,0.2) 15%, rgba(13,13,13,0.15) 50%, rgba(13,13,13,0.2) 85%, #0D0D0D 100%);"></div>
+  <div class="absolute inset-0" style="z-index:1; background: radial-gradient(ellipse at center, transparent 30%, rgba(13,13,13,0.6) 100%);"></div>
+
+  <div class="relative" style="z-index:2;">
+    <!-- ORDER CTA -->
+    <div class="py-24 px-6">
+      <div class="max-w-3xl mx-auto text-center reveal">
+        <div class="flex items-center justify-center gap-3 mb-6" aria-hidden="true">
+          <div style="width:40px; height:1px; background:rgba(200,169,110,0.4);"></div>
+          <span class="star-shine" style="animation-delay:0s;"><svg width="14" height="14" viewBox="0 0 20 20" fill="#C8A96E"><path d="M10 0L12.2 7.8H20L13.8 12.2L16 20L10 15.6L4 20L6.2 12.2L0 7.8H7.8Z"/></svg></span>
+          <span class="star-shine" style="animation-delay:0.15s;"><svg width="16" height="16" viewBox="0 0 20 20" fill="#C8A96E"><path d="M10 0L12.2 7.8H20L13.8 12.2L16 20L10 15.6L4 20L6.2 12.2L0 7.8H7.8Z"/></svg></span>
+          <span class="star-shine" style="animation-delay:0.3s;"><svg width="18" height="18" viewBox="0 0 20 20" fill="#C8A96E" style="filter:drop-shadow(0 0 6px rgba(200,169,110,0.5));"><path d="M10 0L12.2 7.8H20L13.8 12.2L16 20L10 15.6L4 20L6.2 12.2L0 7.8H7.8Z"/></svg></span>
+          <span class="star-shine" style="animation-delay:0.45s;"><svg width="16" height="16" viewBox="0 0 20 20" fill="#C8A96E"><path d="M10 0L12.2 7.8H20L13.8 12.2L16 20L10 15.6L4 20L6.2 12.2L0 7.8H7.8Z"/></svg></span>
+          <span class="star-shine" style="animation-delay:0.6s;"><svg width="14" height="14" viewBox="0 0 20 20" fill="#C8A96E"><path d="M10 0L12.2 7.8H20L13.8 12.2L16 20L10 15.6L4 20L6.2 12.2L0 7.8H7.8Z"/></svg></span>
+          <div style="width:40px; height:1px; background:rgba(200,169,110,0.4);"></div>
+        </div>
+
+        <h2 class="font-playfair text-cream" style="font-size:clamp(2rem, 4.5vw, 3rem); font-weight:600; line-height:1.2;">
+          Ready to Satisfy<br><span style="color:#C8A96E;">Your Crave?</span>
+        </h2>
+        <p class="mt-4 font-inter" style="color:rgba(245,240,232,0.7); font-size:0.95rem;">Order delivery or pick up — we're ready when you are.</p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+          <a href="https://www.grubhub.com/restaurant/2140130" target="_blank" rel="noopener" class="btn-gold" style="padding:16px 40px; font-size:0.95rem; box-shadow: 0 4px 20px rgba(200,169,110,0.4), inset 0 1px 0 rgba(255,255,255,0.15);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:8px;" aria-hidden="true"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m0 0h6m0 0l2-5"/></svg>
+            Order Delivery
+          </a>
+          <a href="tel:7203798465" class="btn-outline" style="padding:16px 40px; font-size:0.95rem; box-shadow: 0 4px 20px rgba(200,169,110,0.15), inset 0 0 0 1px rgba(200,169,110,0.1);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:8px;" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12 19.79 19.79 0 01.01 3.38a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.72a16 16 0 006.37 6.37l1.69-1.69a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call to Order
+          </a>
+        </div>
+
+        <p class="mt-8 font-inter" style="color:rgba(245,240,232,0.5); font-size:0.85rem;">
+          Or visit us at <span style="color:rgba(200,169,110,0.8);">1000 S Colorado Blvd Ste 103, Glendale, CO 80246</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- GOOGLE REVIEW CTA -->
+    <div class="py-12 px-6">
+      <div class="max-w-3xl mx-auto text-center reveal">
+        <h2 class="font-playfair text-cream" style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:600;">Loved Your Experience?</h2>
+        <p class="mt-4 font-inter" style="color:rgba(245,240,232,0.7); font-size:1.05rem; max-width:500px; margin:0 auto;">Your review helps our family business grow. It takes 30 seconds and means the world to us.</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="https://g.page/r/CcPVaf3E92R5EAg/review" target="_blank" rel="noopener" class="btn-gold" style="padding:16px 44px; font-size:1rem; gap:10px; box-shadow: 0 6px 30px rgba(200,169,110,0.45), inset 0 1px 0 rgba(255,255,255,0.2);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            Leave Us a Google Review
+          </a>
+        </div>
+        <div class="flex justify-center items-end gap-2 mt-6" aria-label="5 star rating">
+          <span class="star-shine" style="animation-delay:0s;"><svg width="32" height="32" viewBox="0 0 20 20" fill="#C8A96E" style="transform:rotate(-12deg) translateY(3px); filter:drop-shadow(0 0 4px rgba(200,169,110,0.3));"><path d="M10 0L12.2 7.8H20L13.8 12.2L16 20L10 15.6L4 20L6.2 12.2L0 7.8H7.8Z"/></svg></span>
+          <span class="star-shine" style="animation-delay:0.15s;"><svg width="38" height="38" viewBox="0 0 20 20" fill="#C8A96E" style="transform:rotate(-6deg) translateY(1px); filter:drop-shadow(0 0 5px rgba(200,169,110,0.4));"><path d="M10 0L12.2 7.8H20L13.8 12.2L16 20L10 15.6L4 20L6.2 12.2L0 7.8H7.8Z"/></svg></span>
+          <span class="star-shine" style="animation-delay:0.3s;"><svg width="44" height="44" viewBox="0 0 20 20" fill="#C8A96E" style="filter:drop-shadow(0 0 10px rgba(200,169,110,0.6));"><path d="M10 0L12.2 7.8H20L13.8 12.2L16 20L10 15.6L4 20L6.2 12.2L0 7.8H7.8Z"/></svg></span>
+          <span class="star-shine" style="animation-delay:0.45s;"><svg width="38" height="38" viewBox="0 0 20 20" fill="#C8A96E" style="transform:rotate(6deg) translateY(1px); filter:drop-shadow(0 0 5px rgba(200,169,110,0.4));"><path d="M10 0L12.2 7.8H20L13.8 12.2L16 20L10 15.6L4 20L6.2 12.2L0 7.8H7.8Z"/></svg></span>
+          <span class="star-shine" style="animation-delay:0.6s;"><svg width="32" height="32" viewBox="0 0 20 20" fill="#C8A96E" style="transform:rotate(12deg) translateY(3px); filter:drop-shadow(0 0 4px rgba(200,169,110,0.3));"><path d="M10 0L12.2 7.8H20L13.8 12.2L16 20L10 15.6L4 20L6.2 12.2L0 7.8H7.8Z"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. CONTACT & LOCATION -->
+<section id="contact" class="py-28 px-6" style="background:linear-gradient(180deg, #0D0D0D 0%, #131210 50%, #0D0D0D 100%);" aria-label="Contact and location">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14 reveal">
+      <p class="font-inter uppercase tracking-widest text-gold mb-3" style="font-size:0.8rem; letter-spacing:0.15em;">Find Us</p>
+      <h2 class="font-playfair text-cream" style="font-size:clamp(2rem, 4vw, 2.75rem); font-weight:600;">Contact &amp; Location</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+      <!-- Map -->
+      <div class="reveal slide-left" style="border-radius:12px; overflow:hidden; border:1px solid rgba(200,169,110,0.15);">
+        <iframe
+          title="Crave Mediterranean Grill location map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3069.3!2d-104.9324!3d39.7112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7ef04b2a0001%3A0x79ef27e4fd69a9c3!2s1000%20S%20Colorado%20Blvd%20%23103%2C%20Glendale%2C%20CO%2080246!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus"
+          width="100%"
+          height="400"
+          style="border:0; display:block; filter:grayscale(30%) invert(5%); width:100%; min-height:250px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Google Maps showing Crave Mediterranean Grill at 1000 S Colorado Blvd Ste 103, Glendale CO">
+        </iframe>
+      </div>
+
+      <!-- Contact info — button style -->
+      <div class="reveal slide-right" style="display:flex; flex-direction:column; gap:12px;">
+
+        <a href="https://goo.gl/maps/Vfw6K9agsHHpexuGA" target="_blank" rel="noopener" class="btn-gold" style="padding:14px 20px; font-size:0.85rem; justify-content:flex-start; gap:12px; text-align:left; border-radius:12px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span style="line-height:1.4;">1000 S Colorado Blvd Ste 103<br><span style="opacity:0.7; font-size:0.8rem;">Glendale, CO 80246</span></span>
+        </a>
+
+        <a href="tel:7203798465" class="btn-gold" style="padding:14px 20px; font-size:0.85rem; justify-content:flex-start; gap:12px; text-align:left; border-radius:12px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12 19.79 19.79 0 01.01 3.38a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.72a16 16 0 006.37 6.37l1.69-1.69a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (720) 379-8465
+        </a>
+
+        <a href="mailto:cravemediterraneangrill@gmail.com" class="btn-gold" style="padding:14px 20px; font-size:0.8rem; justify-content:flex-start; gap:12px; text-align:left; border-radius:12px; word-break:break-all;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          cravemediterraneangrill@gmail.com
+        </a>
+
+        <div class="btn-outline" style="padding:14px 20px; font-size:0.85rem; justify-content:flex-start; gap:12px; text-align:left; border-radius:12px; cursor:default;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span style="line-height:1.4;">Mon–Sat: 11am–9pm<br>Sun: 12pm–8pm</span>
+        </div>
+
+        <!-- Social + Review -->
+        <div style="padding-top:16px; border-top:1px solid rgba(200,169,110,0.12);">
+          <div class="flex items-center gap-4 flex-wrap">
+            <a href="https://www.facebook.com/CraveMediterraneanGrill/" target="_blank" rel="noopener" class="social-icon" aria-label="Crave Mediterranean Grill on Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/cravemediterraneangrill/" target="_blank" rel="noopener" class="social-icon" aria-label="Crave Mediterranean Grill on Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://maps.google.com/?q=Crave+Mediterranean+Grill+Glendale+CO" target="_blank" rel="noopener" class="social-icon" aria-label="Find Crave Mediterranean Grill on Google Maps">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </a>
+            <a href="https://g.page/r/CcPVaf3E92R5EAg/review" target="_blank" rel="noopener"
+               class="font-inter text-xs uppercase tracking-wide text-gold hover:text-gold-light transition-colors"
+               style="letter-spacing:0.08em; text-decoration:none; border-bottom:1px solid rgba(200,169,110,0.35); padding-bottom:2px;">
+              Leave Us a Review
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES / PITCH SECTION -->
+<section id="packages" class="py-32 px-6" style="background:linear-gradient(180deg, #0D0D0D 0%, #111 50%, #0D0D0D 100%);">
+  <div class="max-w-6xl mx-auto">
+    <!-- View Again button — unlocks scroll -->
+    <div id="view-again-wrap" class="text-center mb-8" style="display:none;">
+      <button id="view-again-btn" style="background:none; border:1px solid rgba(200,169,110,0.3); color:#C8A96E; font-family:Inter,sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:8px 24px; border-radius:99px; cursor:pointer; transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(200,169,110,0.6)';this.style.background='rgba(200,169,110,0.08)'" onmouseleave="this.style.borderColor='rgba(200,169,110,0.3)';this.style.background='none'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline; vertical-align:middle; margin-right:6px;"><polyline points="18 15 12 9 6 15"/></svg>View Again?
+      </button>
+    </div>
+    <div class="text-center mb-16 reveal">
+      <p class="font-inter uppercase tracking-widest text-gold mb-3" style="font-size:0.85rem; letter-spacing:0.15em;">Invest in Your Business</p>
+      <h2 class="font-playfair text-cream" style="font-size:clamp(2.2rem, 5vw, 3.2rem); font-weight:600;">Like What You See?</h2>
+      <p class="mt-4 font-inter mx-auto" style="color:rgba(245,240,232,0.55); font-size:1.05rem; max-width:600px;">Your current website is leaving money on the table. Let's fix that with a site that actually brings in customers.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-end">
+
+      <!-- TIER 1: STARTER — $650 -->
+      <div class="pricing-card price-tier-1 reveal" data-reveal-delay="0" style="background:rgba(22,22,22,0.6); backdrop-filter:blur(8px); border:1px solid rgba(200,169,110,0.2); border-radius:16px; padding:30px 24px; position:relative; display:flex; flex-direction:column; transition: all 0.4s cubic-bezier(0.25,0.1,0.25,1);">
+        <div style="position:absolute; top:-13px; left:50%; transform:translateX(-50%); background:rgba(22,22,22,0.9); border:1px solid rgba(200,169,110,0.3); color:#C8A96E; font-family:Inter,sans-serif; font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:4px 16px; border-radius:99px; white-space:nowrap;">THIS SITE</div>
+        <p class="font-inter uppercase tracking-widest text-gold mb-1" style="font-size:0.7rem; letter-spacing:0.18em; margin-top:6px;">Starter</p>
+        <p class="font-inter mb-5" style="color:rgba(245,240,232,0.5); font-size:0.88rem; font-style:italic;">What you're looking at right now</p>
+        <p style="display:flex; align-items:baseline; gap:10px;"><span style="font-family:Inter,sans-serif; font-size:1rem; color:rgba(245,240,232,0.35); text-decoration:line-through;">$1,000</span><span class="font-playfair text-gold" style="font-size:3rem; font-weight:700; line-height:1; text-shadow: 0 0 24px rgba(200,169,110,0.35);">$650</span></p>
+        <p class="font-inter mb-6" style="font-size:0.75rem; color:rgba(245,240,232,0.35); margin-top:4px;">one-time</p>
+        <ul style="list-style:none; padding:0; margin:0 0 32px 0; flex:1;">
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.1);"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>Custom designed responsive website</li>
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.1);"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>Interactive menu with filtering</li>
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.1);"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>Google Maps &amp; contact page</li>
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif;"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>SSL &amp; basic SEO setup</li>
+        </ul>
+        <a href="#monthly-addons" class="btn-outline w-full text-center text-sm" style="padding:13px 20px; margin-top:auto;">Unlock This Site</a>
+      </div>
+
+      <!-- TIER 2: BUSINESS — $1,200 (MOST POPULAR) -->
+      <div class="pricing-card pricing-card-featured price-tier-2 reveal" data-reveal-delay="300" style="background:rgba(26,22,14,0.85); backdrop-filter:blur(14px); border:2px solid rgba(200,169,110,0.55); border-radius:16px; padding:48px 28px; position:relative; display:flex; flex-direction:column; box-shadow: 0 0 40px rgba(200,169,110,0.12), 0 0 0 1px rgba(200,169,110,0.08); transition: all 0.4s cubic-bezier(0.25,0.1,0.25,1);">
+        <div class="best-value-badge" style="position:absolute; top:-15px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,#C8A96E,#E8D09C,#C8A96E); background-size:200% auto; animation: goldLinePulse 3s ease infinite, badgePulse 2.2s ease-in-out infinite; color:#0D0D0D; font-family:Inter,sans-serif; font-size:0.68rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; padding:6px 22px; border-radius:99px; white-space:nowrap;">MOST POPULAR</div>
+        <p class="font-inter uppercase tracking-widest text-gold mb-1" style="font-size:0.7rem; letter-spacing:0.18em; margin-top:8px;">Business</p>
+        <p class="font-inter mb-5" style="color:rgba(245,240,232,0.45); font-size:0.88rem; font-style:italic;">Ordering, reservations &amp; marketing</p>
+        <p style="font-family:Inter,sans-serif; font-size:1rem; color:rgba(245,240,232,0.35); text-decoration:line-through; margin-bottom:4px;">$1,600</p>
+        <p class="font-playfair text-gold" style="font-size:3rem; font-weight:700; line-height:1;">$1,200</p>
+        <p class="font-inter mb-6" style="font-size:0.75rem; color:rgba(245,240,232,0.35); margin-top:4px;">one-time</p>
+        <ul style="list-style:none; padding:0; margin:0 0 32px 0; flex:1;">
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(200,169,110,0.55); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.1); font-style:italic;"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>Everything in Starter, plus:</li>
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>On-site ordering system</li>
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span><span style="color:#FF8000; font-weight:700;">Grubhub</span>, <span style="color:#06C167; font-weight:700;">UberEats</span> &amp; <span style="color:#FF3008; font-weight:700;">DoorDash</span> routing</li>
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>Table reservation system</li>
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif;"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>Google Business Profile optimization</li>
+        </ul>
+        <a href="#monthly-addons" class="btn-gold w-full text-center text-sm" style="padding:13px 20px; margin-top:auto; background-size:300% auto;">Get Started</a>
+      </div>
+
+      <!-- TIER 3: PREMIUM — $2,500 + $199/mo -->
+      <div class="pricing-card price-tier-3 reveal" data-reveal-delay="600" style="background:rgba(22,22,22,0.7); backdrop-filter:blur(10px); border:2px solid rgba(200,169,110,0.3); border-radius:16px; padding:44px 30px; position:relative; display:flex; flex-direction:column; transition: all 0.4s cubic-bezier(0.25,0.1,0.25,1);">
+        <div class="best-value-badge" style="position:absolute; top:-13px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,#C8A96E,#E8D09C,#C8A96E); background-size:200% auto; animation: goldLinePulse 3s ease infinite; color:#0D0D0D; font-family:Inter,sans-serif; font-size:0.6rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; padding:5px 16px; border-radius:99px; white-space:nowrap;">ALL-INCLUSIVE</div>
+        <p class="font-inter uppercase tracking-widest text-gold mb-1" style="font-size:0.7rem; letter-spacing:0.18em; margin-top:6px;">Premium</p>
+        <p class="font-inter mb-5" style="color:rgba(245,240,232,0.45); font-size:0.88rem; font-style:italic;">The complete digital partner</p>
+        <p class="font-playfair text-gold" style="font-size:3rem; font-weight:700; line-height:1;">$2,500</p>
+        <p class="font-inter mb-1" style="font-size:0.75rem; color:rgba(245,240,232,0.35); margin-top:4px;">one-time setup</p>
+        <p class="font-inter mb-6" style="font-size:0.8rem; color:rgba(200,169,110,0.6); margin-top:2px;">+ <span style="text-decoration:line-through; color:rgba(245,240,232,0.3);">$249</span> <strong>$199</strong>/mo ongoing</p>
+        <ul style="list-style:none; padding:0; margin:0 0 32px 0; flex:1;">
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(200,169,110,0.55); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.1); font-style:italic;"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>Everything in Business, plus:</li>
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>Employee scheduling system</li>
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>Admin panel for menu updates</li>
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>Customer loyalty program</li>
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>4 SEO blog posts per month</li>
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>Google review management</li>
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>Monthly analytics reports</li>
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>Hosting, SSL &amp; daily backups</li>
+          <li style="padding:8px 0; font-size:0.85rem; color:rgba(245,240,232,0.72); font-family:Inter,sans-serif;"><span style="color:#C8A96E; margin-right:10px;">&#10003;</span>Priority support &amp; same-day updates</li>
+        </ul>
+        <a href="#monthly-addons" class="btn-outline w-full text-center text-sm" style="padding:13px 20px; margin-top:auto;">Go Premium</a>
+      </div>
+    </div>
+
+    <!-- Monthly maintenance tiers — collapsible -->
+    <div id="monthly-addons" class="text-center mt-16 mb-6 reveal">
+      <div style="height:1px; background:linear-gradient(90deg, transparent, rgba(200,169,110,0.2), transparent); max-width:300px; margin:0 auto 24px;"></div>
+      <button id="addons-toggle" style="background:none; border:1px solid rgba(200,169,110,0.2); border-radius:12px; padding:14px 32px; cursor:pointer; display:inline-flex; align-items:center; gap:10px; transition:all 0.3s; color:#C8A96E;" onmouseenter="this.style.borderColor='rgba(200,169,110,0.5)';this.style.background='rgba(200,169,110,0.05)'" onmouseleave="this.style.borderColor='rgba(200,169,110,0.2)';this.style.background='none'">
+        <span style="font-family:Inter,sans-serif; font-size:0.7rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase;">Optional Add-Ons</span>
+        <span style="font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:600;">Monthly Maintenance</span>
+        <svg id="addons-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" style="transition:transform 0.3s;"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div id="addons-content" style="max-height:0; overflow:hidden; transition:max-height 0.5s cubic-bezier(0.25,0.1,0.25,1); opacity:0;">
+    <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      <!-- MONTHLY ESSENTIALS — $99/mo -->
+      <div class="pricing-card reveal" style="background:rgba(22,22,22,0.6); backdrop-filter:blur(8px); border:1px solid rgba(200,169,110,0.15); border-radius:16px; padding:28px 24px; display:flex; flex-direction:column;">
+        <p class="font-inter uppercase tracking-widest text-gold mb-1" style="font-size:0.65rem; letter-spacing:0.18em;">Essentials</p>
+        <p class="font-playfair text-gold" style="font-size:2.2rem; font-weight:700; line-height:1;">$99<span style="font-size:0.85rem; font-weight:400; opacity:0.6;">/mo</span></p>
+        <p class="font-inter mb-5" style="font-size:0.75rem; color:rgba(245,240,232,0.35); margin-top:3px;">Keep it running smooth</p>
+        <ul style="list-style:none; padding:0; margin:0 0 20px 0; flex:1;">
+          <li style="padding:6px 0; font-size:0.82rem; color:rgba(245,240,232,0.65); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:8px;">&#10003;</span>Hosting &amp; SSL</li>
+          <li style="padding:6px 0; font-size:0.82rem; color:rgba(245,240,232,0.65); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:8px;">&#10003;</span>Menu &amp; content updates</li>
+          <li style="padding:6px 0; font-size:0.82rem; color:rgba(245,240,232,0.65); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:8px;">&#10003;</span>Uptime monitoring &amp; backups</li>
+          <li style="padding:6px 0; font-size:0.82rem; color:rgba(245,240,232,0.65); font-family:Inter,sans-serif;"><span style="color:#C8A96E; margin-right:8px;">&#10003;</span>Email support</li>
+        </ul>
+        <a href="#contact" class="btn-outline w-full text-center text-sm" style="padding:11px 16px; margin-top:auto;">Add to Any Plan</a>
+      </div>
+
+      <!-- MONTHLY GROWTH — $249/mo -->
+      <div class="pricing-card reveal" style="background:rgba(22,22,22,0.6); backdrop-filter:blur(8px); border:1px solid rgba(200,169,110,0.15); border-radius:16px; padding:28px 24px; display:flex; flex-direction:column;">
+        <p class="font-inter uppercase tracking-widest text-gold mb-1" style="font-size:0.65rem; letter-spacing:0.18em;">Growth</p>
+        <p class="font-playfair text-gold" style="font-size:2.2rem; font-weight:700; line-height:1;">$249<span style="font-size:0.85rem; font-weight:400; opacity:0.6;">/mo</span></p>
+        <p class="font-inter mb-5" style="font-size:0.75rem; color:rgba(245,240,232,0.35); margin-top:3px;">Grow your online presence</p>
+        <ul style="list-style:none; padding:0; margin:0 0 20px 0; flex:1;">
+          <li style="padding:6px 0; font-size:0.82rem; color:rgba(200,169,110,0.5); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07); font-style:italic;"><span style="color:#C8A96E; margin-right:8px;">&#10003;</span>Everything in Essentials, plus:</li>
+          <li style="padding:6px 0; font-size:0.82rem; color:rgba(245,240,232,0.65); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:8px;">&#10003;</span>4 SEO blog posts per month</li>
+          <li style="padding:6px 0; font-size:0.82rem; color:rgba(245,240,232,0.65); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:8px;">&#10003;</span>Google review management</li>
+          <li style="padding:6px 0; font-size:0.82rem; color:rgba(245,240,232,0.65); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:8px;">&#10003;</span>Social media posting (4/month)</li>
+          <li style="padding:6px 0; font-size:0.82rem; color:rgba(245,240,232,0.65); font-family:Inter,sans-serif; border-bottom:1px solid rgba(200,169,110,0.07);"><span style="color:#C8A96E; margin-right:8px;">&#10003;</span>Monthly analytics report</li>
+          <li style="padding:6px 0; font-size:0.82rem; color:rgba(245,240,232,0.65); font-family:Inter,sans-serif;"><span style="color:#C8A96E; margin-right:8px;">&#10003;</span>Priority support</li>
+        </ul>
+        <a href="#contact" class="btn-outline w-full text-center text-sm" style="padding:11px 16px; margin-top:auto;">Add to Any Plan</a>
+      </div>
+    </div>
+    </div>
+
+    <p class="text-center mt-10 font-inter" style="font-size:0.8rem; color:rgba(245,240,232,0.35); max-width:680px; margin-left:auto; margin-right:auto;">All packages include domain setup assistance and a training walkthrough. Monthly plans can be added to any tier and cancelled anytime. Custom packages available on request.</p>
+    <div class="text-center mt-8">
+      <p class="font-playfair text-cream" style="font-size:1.3rem; font-weight:500;">Questions? Let's talk.</p>
+      <div class="flex justify-center gap-4 mt-4 flex-wrap">
+        <a href="tel:3039748500" class="btn-outline text-sm" style="padding:10px 24px;">Call Me</a>
+        <a href="mailto:illiasse.mounjim@gmail.com" class="btn-gold text-sm" style="padding:10px 24px;">Email Me</a>
+        <a href="https://mounjim.com" target="_blank" rel="noopener" class="btn-outline text-sm" style="padding:10px 24px;">Visit My Site</a>
+      </div>
+      <p class="mt-6" style="font-size:0.78rem; color:rgba(200,169,110,0.4);">
+        <a href="https://mounjim.com" target="_blank" rel="noopener" style="color:rgba(200,169,110,0.45); text-decoration:none; transition:color 0.3s;" onmouseenter="this.style.color='#C8A96E'" onmouseleave="this.style.color='rgba(200,169,110,0.45)'">Designed &amp; built by <strong>Ilias Mounjim</strong></a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FOOTER -->
+<footer style="background:#080808; border-top:1px solid rgba(200,169,110,0.1);" role="contentinfo" aria-label="Site footer">
+  <div class="max-w-7xl mx-auto px-6 py-14">
+    <div class="grid md:grid-cols-3 gap-10 mb-10">
+      <!-- Logo + tagline -->
+      <div>
+        <img src="images/food/CRAVE-WHITE-768x325.png"
+             alt="Crave Mediterranean Grill"
+             style="height:36px; width:auto; margin-bottom:12px; opacity:0.85;" />
+        <p class="font-inter text-sm" style="color:rgba(245,240,232,0.45); line-height:1.7; max-width:240px;">
+          Family recipes. Fresh ingredients. Warm smiles. Glendale, Colorado.
+        </p>
+        <div class="flex gap-3 mt-5">
+          <a href="https://www.facebook.com/CraveMediterraneanGrill/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/cravemediterraneangrill/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="font-inter text-xs uppercase tracking-widest text-gold mb-5" style="letter-spacing:0.12em;">Quick Links</h3>
+        <nav aria-label="Footer navigation">
+          <ul class="space-y-3" style="list-style:none; padding:0; margin:0;">
+            <li><a href="#home" class="font-inter text-sm hover:text-gold transition-colors" style="color:rgba(245,240,232,0.55); text-decoration:none;">Home</a></li>
+            <li><a href="#about" class="font-inter text-sm hover:text-gold transition-colors" style="color:rgba(245,240,232,0.55); text-decoration:none;">About Us</a></li>
+            <li><a href="#menu" class="font-inter text-sm hover:text-gold transition-colors" style="color:rgba(245,240,232,0.55); text-decoration:none;">Menu</a></li>
+            <li><a href="#gallery" class="font-inter text-sm hover:text-gold transition-colors" style="color:rgba(245,240,232,0.55); text-decoration:none;">Gallery</a></li>
+            <li><a href="#contact" class="font-inter text-sm hover:text-gold transition-colors" style="color:rgba(245,240,232,0.55); text-decoration:none;">Contact</a></li>
+            <li><a href="https://www.grubhub.com/restaurant/2140130" target="_blank" rel="noopener" class="font-inter text-sm hover:text-gold transition-colors" style="color:rgba(245,240,232,0.55); text-decoration:none;">Order Online</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Contact summary -->
+      <div>
+        <h3 class="font-inter text-xs uppercase tracking-widest text-gold mb-5" style="letter-spacing:0.12em;">Visit Us</h3>
+        <address class="not-italic">
+          <p class="font-inter text-sm mb-2" style="color:rgba(245,240,232,0.55); line-height:1.7;">
+            1000 S Colorado Blvd Ste 103<br>Glendale, CO 80246
+          </p>
+          <a href="tel:7203798465" class="font-inter text-sm hover:text-gold transition-colors block mb-1" style="color:rgba(245,240,232,0.55); text-decoration:none;">(720) 379-8465</a>
+          <a href="mailto:cravemediterraneangrill@gmail.com" class="font-inter text-sm hover:text-gold transition-colors block" style="color:rgba(245,240,232,0.55); text-decoration:none;">cravemediterraneangrill@gmail.com</a>
+        </address>
+        <div class="mt-4 pt-4" style="border-top:1px solid rgba(200,169,110,0.1);">
+          <p class="font-inter text-xs" style="color:rgba(245,240,232,0.35);">Mon–Sat: 11am–9pm &nbsp;|&nbsp; Sun: 12pm–8pm</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 pt-8" style="border-top:1px solid rgba(200,169,110,0.08);">
+      <p class="font-inter text-xs" style="color:rgba(245,240,232,0.3);">
+        &copy; 2026 Crave Mediterranean Grill. All rights reserved.
+        <span style="display:inline-block; margin-left:8px; color:rgba(200,169,110,0.4);">|</span>
+        <a href="https://mounjim.com" target="_blank" rel="noopener" style="margin-left:8px; color:rgba(200,169,110,0.5); text-decoration:none; font-family:Inter,sans-serif; font-size:0.8rem; transition:color 0.3s; letter-spacing:0.08em;" onmouseenter="this.style.color='#C8A96E'" onmouseleave="this.style.color='rgba(200,169,110,0.5)'">Designed by <strong style="font-weight:700; text-transform:uppercase;">MOUNJIM</strong></a>
+      </p>
+      <a href="https://g.page/r/CcPVaf3E92R5EAg/review" target="_blank" rel="noopener"
+         class="font-inter text-xs hover:text-gold transition-colors"
+         style="color:rgba(245,240,232,0.35); text-decoration:none;">
+        Leave a Review on Google
+      </a>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button id="back-to-top"
+          onclick="window.scrollTo({top:0,behavior:'smooth'})"
+          style="position:fixed; bottom:90px; right:24px; width:44px; height:44px; border-radius:50%; background:rgba(200,169,110,0.15); border:1px solid rgba(200,169,110,0.4); color:#C8A96E; display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:40; transition:opacity 0.3s, transform 0.3s, background 0.3s;"
+          aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+</footer>
+
+<!-- Floating Call Button (left) -->
+<div id="floating-call" style="position:fixed; bottom:24px; left:24px; z-index:50; display:flex; align-items:center; gap:8px; background:rgba(13,13,13,0.9); border:2px solid rgba(200,169,110,0.5); color:#C8A96E; font-family:'Inter',sans-serif; font-weight:700; font-size:0.75rem; letter-spacing:0.06em; text-transform:uppercase; padding:12px 18px; border-radius:50px; cursor:pointer; box-shadow:0 4px 20px rgba(0,0,0,0.4); transition: all 0.4s cubic-bezier(0.25,0.1,0.25,1); overflow:hidden; white-space:nowrap;" aria-label="Call to order">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12 19.79 19.79 0 01.01 3.38a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.72a16 16 0 006.37 6.37l1.69-1.69a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+  <span class="fab-text">Call Now</span>
+</div>
+
+<!-- Floating Order Button (right) -->
+<div id="floating-order" style="position:fixed; bottom:24px; right:24px; z-index:50; display:flex; align-items:center; gap:8px; background:linear-gradient(135deg,#C8A96E,#D9BF8C,#C8A96E); background-size:200% auto; color:#0D0D0D; font-family:'Inter',sans-serif; font-weight:700; font-size:0.75rem; letter-spacing:0.06em; text-transform:uppercase; padding:12px 18px; border-radius:50px; cursor:pointer; box-shadow:0 4px 20px rgba(200,169,110,0.4); transition: all 0.4s cubic-bezier(0.25,0.1,0.25,1); overflow:hidden; white-space:nowrap;" aria-label="Order delivery">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0;"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m0 0h6m0 0l2-5"/></svg>
+  <span class="fab-text">Order Now</span>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  // ─── FLOATING ACTION BUTTONS — collapse after 3s, expand on click, action on 2nd click ───
+  (function() {
+    var callBtn = document.getElementById('floating-call');
+    var orderBtn = document.getElementById('floating-order');
+    var callExpanded = true;
+    var orderExpanded = true;
+
+    function collapse(btn) {
+      btn.style.padding = '12px';
+      btn.style.borderRadius = '50%';
+      var txt = btn.querySelector('.fab-text');
+      if (txt) { txt.style.display = 'none'; }
+    }
+
+    function expand(btn) {
+      btn.style.padding = '12px 18px';
+      btn.style.borderRadius = '50px';
+      var txt = btn.querySelector('.fab-text');
+      if (txt) { txt.style.display = ''; }
+    }
+
+    // Collapse both after 10 seconds
+    setTimeout(function() {
+      collapse(callBtn); callExpanded = false;
+      collapse(orderBtn); orderExpanded = false;
+    }, 10000);
+
+    // Call button: click to expand, click again to call
+    callBtn.addEventListener('click', function() {
+      if (!callExpanded) {
+        expand(callBtn);
+        callExpanded = true;
+        // Auto-collapse after 4s
+        setTimeout(function() { if (callExpanded) { collapse(callBtn); callExpanded = false; } }, 4000);
+      } else {
+        window.location.href = 'tel:7203798465';
+      }
+    });
+
+    // Order button: click to expand, click again to go to Grubhub
+    orderBtn.addEventListener('click', function() {
+      if (!orderExpanded) {
+        expand(orderBtn);
+        orderExpanded = true;
+        setTimeout(function() { if (orderExpanded) { collapse(orderBtn); orderExpanded = false; } }, 4000);
+      } else {
+        window.open('https://www.grubhub.com/restaurant/2140130', '_blank');
+      }
+    });
+  })();
+
+  // ─── LOADING ANIMATION ───
+  const taglineText = 'you crave, we serve';
+  const taglineEl = document.getElementById('loading-tagline');
+  const overlay = document.getElementById('loading-overlay');
+
+  // Type the tagline letter by letter starting at 1.2s
+  let charIdx = 0;
+  function typeChar() {
+    if (charIdx < taglineText.length) {
+      const span = document.createElement('span');
+      span.textContent = taglineText[charIdx] === ' ' ? '\u00A0' : taglineText[charIdx];
+      span.style.cssText = 'opacity:0; transform:translateY(4px); display:inline-block; transition: opacity 0.12s ease, transform 0.12s ease;';
+      taglineEl.appendChild(span);
+      // Trigger transition on next frame
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          span.style.opacity = '1';
+          span.style.transform = 'translateY(0)';
+        });
+      });
+      charIdx++;
+      setTimeout(typeChar, 65);
+    }
+  }
+  setTimeout(typeChar, 1200);
+
+  // Dismiss overlay at 2.6s with clip-path wipe
+  setTimeout(function () {
+    overlay.classList.add('fade-out');
+    overlay.addEventListener('animationend', function () {
+      overlay.style.display = 'none';
+    }, { once: true });
+  }, 2600);
+
+  // ─── HERO PARTICLES ───
+  const particleContainer = document.getElementById('hero-particles');
+  const PARTICLE_COUNT = 22;
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = Math.random() * 3 + 1;
+    const left = Math.random() * 100;
+    const bottom = Math.random() * 60;
+    const duration = Math.random() * 6 + 5;
+    const delay = Math.random() * 8;
+    p.style.cssText = [
+      'width:' + size + 'px',
+      'height:' + size + 'px',
+      'left:' + left + '%',
+      'bottom:' + bottom + '%',
+      'animation-duration:' + duration + 's',
+      'animation-delay:' + delay + 's',
+    ].join(';');
+    particleContainer.appendChild(p);
+  }
+
+  // ─── SCROLL EFFECTS ───
+  const header = document.getElementById('header');
+  const backToTop = document.getElementById('back-to-top');
+  let ticking = false;
+
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(function () {
+        const y = window.scrollY;
+
+        if (y > 60) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+
+        if (y > 400) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+
+        const heroBg = document.getElementById('hero-bg');
+        if (heroBg && y < window.innerHeight * 1.2) {
+          heroBg.style.transform = 'translateY(' + (y * 0.35) + 'px) translateZ(0)';
+        }
+
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // ─── INTERSECTION OBSERVER (reveal) ───
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var delay = parseInt(entry.target.dataset.revealDelay || '0');
+        if (delay > 0) {
+          setTimeout(function() { entry.target.classList.add('visible'); }, delay);
+        } else {
+          entry.target.classList.add('visible');
+        }
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach(function (el) {
+    revealObserver.observe(el);
+  });
+
+  // ─── COUNTER ANIMATION ───
+  let counterDone = false;
+  const statYears = document.getElementById('stat-years');
+  const counterObserver = new IntersectionObserver(function (entries) {
+    if (entries[0].isIntersecting && !counterDone) {
+      counterDone = true;
+      let start = 0;
+      const end = 20;
+      const duration = 1400;
+      const step = duration / end;
+      const timer = setInterval(function () {
+        start++;
+        statYears.textContent = start + '+';
+        if (start >= end) clearInterval(timer);
+      }, step);
+    }
+  }, { threshold: 0.5 });
+
+  if (statYears) counterObserver.observe(statYears);
+
+  // ─── HAMBURGER MENU ───
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileBackdrop = document.getElementById('mobile-backdrop');
+
+  function openMenu() {
+    hamburger.classList.add('open');
+    mobileMenu.classList.add('open');
+    mobileMenu.removeAttribute('aria-hidden');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    if (mobileBackdrop) { mobileBackdrop.style.opacity = '1'; mobileBackdrop.style.pointerEvents = 'auto'; }
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    if (mobileBackdrop) { mobileBackdrop.style.opacity = '0'; mobileBackdrop.style.pointerEvents = 'none'; }
+  }
+
+  if (mobileBackdrop) { mobileBackdrop.addEventListener('click', closeMenu); }
+
+  hamburger.addEventListener('click', function () {
+    if (mobileMenu.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  // ─── DISH CAROUSEL — slide 1 at a time, show 3 ───
+  (function() {
+    var track = document.getElementById('dish-track');
+    var slides = track.querySelectorAll('.dish-slide');
+    var total = slides.length; // 8
+    var pos = 0;
+    var autoTimer;
+    var isMobile = function() { return window.innerWidth <= 768; };
+
+    function slideWidth() {
+      return isMobile() ? 100 : (100 / 3);
+    }
+
+    function maxPos() {
+      return isMobile() ? total - 1 : total - 3;
+    }
+
+    function goTo(n) {
+      pos = Math.max(0, Math.min(n, maxPos()));
+      track.style.transform = 'translateX(-' + (pos * slideWidth()) + '%)';
+    }
+
+    function next() { goTo(pos >= maxPos() ? 0 : pos + 1); }
+    function prev() { goTo(pos <= 0 ? maxPos() : pos - 1); }
+
+    document.getElementById('dish-next').addEventListener('click', function() { stopAuto(); next(); startAuto(); });
+    document.getElementById('dish-prev').addEventListener('click', function() { stopAuto(); prev(); startAuto(); });
+
+    function startAuto() { autoTimer = setInterval(next, 3500); }
+    function stopAuto() { clearInterval(autoTimer); }
+
+    // Pause on hover
+    var carousel = document.getElementById('dish-carousel');
+    carousel.addEventListener('mouseenter', stopAuto);
+    carousel.addEventListener('mouseleave', startAuto);
+
+    // Touch swipe
+    var startX = 0;
+    carousel.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; stopAuto(); }, {passive:true});
+    carousel.addEventListener('touchend', function(e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) { diff > 0 ? next() : prev(); }
+      startAuto();
+    }, {passive:true});
+
+    window.addEventListener('resize', function() { goTo(Math.min(pos, maxPos())); });
+
+    goTo(0);
+    startAuto();
+  })();
+
+  // ─── MENU CATEGORY FILTERS ───
+  var filterBtns = document.querySelectorAll('#menu-filters .tab-btn');
+  var menuSections = document.querySelectorAll('.menu-section');
+
+  function filterMenu(cat) {
+    menuSections.forEach(function (sec) {
+      if (cat === 'all' || sec.dataset.section === cat) {
+        sec.style.display = '';
+        sec.style.animation = 'tabFade 0.35s ease';
+      } else {
+        sec.style.display = 'none';
+      }
+    });
+  }
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      filterMenu(btn.dataset.category);
+    });
+  });
+
+  // Default: show Appetizers only on load
+  filterMenu('appetizers');
+
+  // ─── TESTIMONIAL CAROUSEL ───
+  const track = document.getElementById('testimonial-track');
+  const dots = document.querySelectorAll('.dot');
+  let currentSlide = 0;
+  let autoplayTimer = null;
+
+  function goToSlide(index) {
+    currentSlide = (index + 3) % 3;
+    track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+    dots.forEach(function (dot, i) {
+      dot.classList.toggle('active', i === currentSlide);
+    });
+  }
+
+  function startAutoplay() {
+    autoplayTimer = setInterval(function () {
+      goToSlide(currentSlide + 1);
+    }, 5000);
+  }
+
+  function resetAutoplay() {
+    clearInterval(autoplayTimer);
+    startAutoplay();
+  }
+
+  dots.forEach(function (dot) {
+    dot.addEventListener('click', function () {
+      goToSlide(parseInt(dot.dataset.slide));
+      resetAutoplay();
+    });
+  });
+
+  startAutoplay();
+
+  if (track) {
+    track.parentElement.parentElement.addEventListener('mouseenter', function () {
+      clearInterval(autoplayTimer);
+    });
+    track.parentElement.parentElement.addEventListener('mouseleave', startAutoplay);
+  }
+
+  // ─── GALLERY LIGHTBOX ───
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const lbCaption = document.getElementById('lb-caption');
+  const lbClose = document.getElementById('lb-close');
+  const lbPrev = document.getElementById('lb-prev');
+  const lbNext = document.getElementById('lb-next');
+
+  let galleryData = [];
+  let currentLbIdx = 0;
+
+  galleryItems.forEach(function (item, idx) {
+    const src = item.dataset.src;
+    const alt = item.dataset.alt || '';
+    galleryData.push({ src: src, alt: alt });
+
+    function openLightbox() {
+      currentLbIdx = idx;
+      lbImg.src = src;
+      lbImg.alt = alt;
+      lbCaption.textContent = alt;
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      lbClose.focus();
+    }
+
+    item.addEventListener('click', openLightbox);
+    item.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox();
+      }
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function navigateLb(dir) {
+    currentLbIdx = (currentLbIdx + dir + galleryData.length) % galleryData.length;
+    const d = galleryData[currentLbIdx];
+    lbImg.src = d.src;
+    lbImg.alt = d.alt;
+    lbCaption.textContent = d.alt;
+  }
+
+  lbClose.addEventListener('click', closeLightbox);
+  lbPrev.addEventListener('click', function () { navigateLb(-1); });
+  lbNext.addEventListener('click', function () { navigateLb(1); });
+
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (lightbox.style.display !== 'flex') return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') navigateLb(-1);
+    if (e.key === 'ArrowRight') navigateLb(1);
+  });
+
+  // ─── SMOOTH SCROLL ───
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ─── MOBILE NAV HOVER ───
+  document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+    link.addEventListener('mouseenter', function () {
+      this.style.color = '#C8A96E';
+    });
+    link.addEventListener('mouseleave', function () {
+      this.style.color = '#F5F0E8';
+    });
+  });
+
+  // ─── STAGGERED MENU ITEM REVEAL ───
+  const menuSectionEls = document.querySelectorAll('.menu-section');
+  const menuItemObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        const items = entry.target.querySelectorAll('.menu-item-row');
+        items.forEach(function (item, idx) {
+          item.classList.add('item-hidden');
+          setTimeout(function () {
+            item.classList.remove('item-hidden');
+            item.classList.add('item-visible');
+          }, idx * 50);
+        });
+        menuItemObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+  menuSectionEls.forEach(function (sec) {
+    menuItemObserver.observe(sec);
+  });
+
+  // ─── MONTHLY ADD-ONS TOGGLE ───
+  var addonsToggle = document.getElementById('addons-toggle');
+  var addonsContent = document.getElementById('addons-content');
+  var addonsArrow = document.getElementById('addons-arrow');
+  var addonsOpen = false;
+  if (addonsToggle && addonsContent) {
+    addonsToggle.addEventListener('click', function() {
+      addonsOpen = !addonsOpen;
+      if (addonsOpen) {
+        addonsContent.style.maxHeight = addonsContent.scrollHeight + 'px';
+        addonsContent.style.opacity = '1';
+        addonsArrow.style.transform = 'rotate(180deg)';
+      } else {
+        addonsContent.style.maxHeight = '0';
+        addonsContent.style.opacity = '0';
+        addonsArrow.style.transform = 'rotate(0)';
+      }
+    });
+  }
+
+  // ─── DEMO WATERMARK — blink: off 3s, on 5s. Hide on packages ───
+  var watermark = document.getElementById('demo-watermark');
+  var packagesSection = document.getElementById('packages');
+  var wmOnPackages = false;
+
+  if (watermark && packagesSection) {
+    var wmObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        wmOnPackages = entry.isIntersecting;
+        if (wmOnPackages) watermark.style.opacity = '0';
+      });
+    }, { threshold: 0.2 });
+    wmObserver.observe(packagesSection);
+
+    // Blink cycle: on for 5s, off for 3s
+    function wmBlink() {
+      if (!wmOnPackages) {
+        watermark.style.opacity = '0.12';
+        watermark.style.transition = 'opacity 0.8s ease';
+      }
+      setTimeout(function() {
+        if (!wmOnPackages) {
+          watermark.style.opacity = '0';
+          watermark.style.transition = 'opacity 0.6s ease';
+        }
+        setTimeout(wmBlink, 3000);
+      }, 5000);
+    }
+    wmBlink();
+  }
+
+  // ─── SCROLL LOCK — packages + footer zone, with View Again unlock ───
+  (function() {
+    var packages = document.getElementById('packages');
+    var footer = document.querySelector('footer');
+    var viewAgainWrap = document.getElementById('view-again-wrap');
+    var viewAgainBtn = document.getElementById('view-again-btn');
+    if (!packages || !footer) return;
+    var locked = false;
+    var packagesTop = 0;
+
+    function updatePositions() {
+      packagesTop = packages.getBoundingClientRect().top + window.scrollY - 80;
+    }
+
+    window.addEventListener('scroll', function() {
+      updatePositions();
+      var scrollY = window.scrollY;
+
+      // Lock once user scrolls past packages top
+      if (scrollY >= packagesTop && !locked) {
+        locked = true;
+        // Show View Again button after lock
+        if (viewAgainWrap) { viewAgainWrap.style.display = 'block'; }
+      }
+
+      // If locked and user tries to scroll above packages, snap back
+      if (locked && scrollY < packagesTop) {
+        window.scrollTo({ top: packagesTop, behavior: 'auto' });
+      }
+    }, { passive: true });
+
+    // View Again button — unlock and scroll to top
+    if (viewAgainBtn) {
+      viewAgainBtn.addEventListener('click', function() {
+        locked = false;
+        if (viewAgainWrap) { viewAgainWrap.style.display = 'none'; }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  })();
+
+  // ─── ABOUT SECTION PARALLAX ───
+  const aboutImgWrap = document.querySelector('.about-img-wrap');
+  const aboutSection = document.getElementById('about');
+
+  function updateAboutParallax() {
+    if (!aboutImgWrap || !aboutSection) return;
+    const rect = aboutSection.getBoundingClientRect();
+    const viewH = window.innerHeight;
+    if (rect.bottom < 0 || rect.top > viewH) return;
+    const progress = (viewH - rect.top) / (viewH + rect.height);
+    const shift = (progress - 0.5) * 40;
+    aboutImgWrap.style.transform = 'translateY(' + shift + 'px)';
+  }
+
+  window.addEventListener('scroll', function () {
+    requestAnimationFrame(updateAboutParallax);
+  }, { passive: true });
+  updateAboutParallax();
+
+})();
+</script>
+</body>
+</html>
