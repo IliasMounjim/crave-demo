@@ -813,12 +813,8 @@
     }
 
     /* ── PRICING CARD SIZES ── */
-    .price-tier-1 { transform: scale(0.92); transform-origin: bottom center; }
-    .price-tier-2 { transform: scale(1.02); }
-    .price-tier-3 { transform: scale(1.05); transform-origin: bottom center; }
-    .price-tier-1:hover { transform: scale(0.98) translateY(-6px); }
-    .price-tier-2:hover { transform: scale(1.03) translateY(-8px); }
-    .price-tier-3:hover { transform: scale(1.08) translateY(-10px); }
+    .price-tier-1, .price-tier-2, .price-tier-3 { transform: none; }
+    .price-tier-1:hover, .price-tier-2:hover, .price-tier-3:hover { transform: translateY(-6px); }
 
     @keyframes cardGlow {
       0%, 100% { box-shadow: 0 0 20px rgba(200,169,110,0.05); }
@@ -924,31 +920,20 @@
       }
 
       /* Packages: ALWAYS side by side */
-      .grid.items-end {
+      .grid.items-stretch {
         display: flex !important;
         gap: 6px !important;
         align-items: flex-end !important;
         overflow: visible !important;
       }
-      .grid.items-end > div {
+      .grid.items-stretch > div {
         flex: 1 1 0 !important;
         min-width: 0 !important;
         overflow: visible !important;
       }
-      .price-tier-1 {
+      .price-tier-1, .price-tier-2, .price-tier-3 {
         transform: none !important;
         padding: 14px 8px !important;
-        min-height: 340px !important;
-      }
-      .price-tier-2 {
-        transform: none !important;
-        padding: 16px 8px !important;
-        min-height: 410px !important;
-      }
-      .price-tier-3 {
-        transform: none !important;
-        padding: 18px 8px !important;
-        min-height: 420px !important;
       }
       .pricing-card .font-playfair {
         font-size: 1.3rem !important;
@@ -1922,25 +1907,25 @@
 </section>
 
 <!-- PACKAGES / PITCH SECTION -->
-<section id="packages" class="py-32 px-6" style="background:linear-gradient(180deg, #0D0D0D 0%, #111 50%, #0D0D0D 100%);">
+<section id="packages" class="py-16 px-6" style="background:linear-gradient(180deg, #0D0D0D 0%, #111 50%, #0D0D0D 100%);">
   <div class="max-w-6xl mx-auto">
     <!-- View Again button — unlocks scroll -->
-    <div id="view-again-wrap" class="text-center mb-8" style="display:none;">
+    <div id="view-again-wrap" class="text-center mb-4" style="display:none;">
       <button id="view-again-btn" style="background:none; border:1px solid rgba(200,169,110,0.3); color:#C8A96E; font-family:Inter,sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:8px 24px; border-radius:99px; cursor:pointer; transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(200,169,110,0.6)';this.style.background='rgba(200,169,110,0.08)'" onmouseleave="this.style.borderColor='rgba(200,169,110,0.3)';this.style.background='none'">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline; vertical-align:middle; margin-right:6px;"><polyline points="18 15 12 9 6 15"/></svg>View Again?
       </button>
     </div>
-    <div class="text-center mb-16 reveal">
+    <div class="text-center mb-10 reveal">
       <p class="font-inter uppercase tracking-widest text-gold mb-3" style="font-size:0.85rem; letter-spacing:0.15em;">Invest in Your Business</p>
       <h2 class="font-playfair text-cream" style="font-size:clamp(2.2rem, 5vw, 3.2rem); font-weight:600;">Like What You See?</h2>
       <p class="mt-4 font-inter mx-auto" style="color:rgba(245,240,232,0.55); font-size:1.05rem; max-width:600px;">Your current website is leaving money on the table. Let's fix that with a site that actually brings in customers.</p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-end">
+    <div class="max-w-md mx-auto">
 
       <!-- TIER 1: STARTER — $650 -->
-      <div class="pricing-card price-tier-1 reveal" data-reveal-delay="0" style="background:rgba(22,22,22,0.6); backdrop-filter:blur(8px); border:1px solid rgba(200,169,110,0.2); border-radius:16px; padding:30px 24px; position:relative; display:flex; flex-direction:column; transition: all 0.4s cubic-bezier(0.25,0.1,0.25,1);">
-        <div style="position:absolute; top:-13px; left:50%; transform:translateX(-50%); background:rgba(22,22,22,0.9); border:1px solid rgba(200,169,110,0.3); color:#C8A96E; font-family:Inter,sans-serif; font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:4px 16px; border-radius:99px; white-space:nowrap;">THIS SITE</div>
+      <div class="pricing-card price-tier-1 reveal" data-reveal-delay="0" style="background:rgba(22,22,22,0.6); backdrop-filter:blur(8px); border:1px solid rgba(200,169,110,0.2); border-radius:16px; padding:36px 28px; position:relative; display:flex; flex-direction:column; transition: all 0.4s cubic-bezier(0.25,0.1,0.25,1);">
+        <div style="position:absolute; top:-13px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,#C8A96E,#E8D09C,#C8A96E); background-size:200% auto; animation: goldLinePulse 3s ease infinite; color:#0D0D0D; font-family:Inter,sans-serif; font-size:0.62rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; padding:5px 16px; border-radius:99px; white-space:nowrap;">CURRENT SITE</div>
         <p class="font-inter uppercase tracking-widest text-gold mb-1" style="font-size:0.7rem; letter-spacing:0.18em; margin-top:6px;">Starter</p>
         <p class="font-inter mb-5" style="color:rgba(245,240,232,0.5); font-size:0.88rem; font-style:italic;">What you're looking at right now</p>
         <p style="display:flex; align-items:baseline; gap:10px;"><span style="font-family:Inter,sans-serif; font-size:1rem; color:rgba(245,240,232,0.35); text-decoration:line-through;">$1,000</span><span class="font-playfair text-gold" style="font-size:3rem; font-weight:700; line-height:1; text-shadow: 0 0 24px rgba(200,169,110,0.35);">$650</span></p>
@@ -1954,8 +1939,21 @@
         <a href="#monthly-addons" class="btn-outline w-full text-center text-sm" style="padding:13px 20px; margin-top:auto;">Unlock This Site</a>
       </div>
 
+    </div>
+
+    <!-- More Options toggle -->
+    <div class="text-center mt-8 mb-6">
+      <button id="more-options-btn" style="background:none; border:1px solid rgba(200,169,110,0.25); color:#C8A96E; font-family:Inter,sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:10px 28px; border-radius:99px; cursor:pointer; transition:all 0.3s; display:inline-flex; align-items:center; gap:8px;" onmouseenter="this.style.borderColor='rgba(200,169,110,0.5)';this.style.background='rgba(200,169,110,0.06)'" onmouseleave="this.style.borderColor='rgba(200,169,110,0.25)';this.style.background='none'">
+        Need More? See Other Options
+        <svg id="more-options-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" style="transition:transform 0.3s;"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div id="more-options-content" style="max-height:0; overflow:hidden; transition:max-height 0.5s cubic-bezier(0.25,0.1,0.25,1); opacity:0;">
+    <div class="grid md:grid-cols-2 gap-6 lg:gap-8 items-stretch max-w-4xl mx-auto">
+
       <!-- TIER 2: BUSINESS — $1,200 (MOST POPULAR) -->
-      <div class="pricing-card pricing-card-featured price-tier-2 reveal" data-reveal-delay="300" style="background:rgba(26,22,14,0.85); backdrop-filter:blur(14px); border:2px solid rgba(200,169,110,0.55); border-radius:16px; padding:48px 28px; position:relative; display:flex; flex-direction:column; box-shadow: 0 0 40px rgba(200,169,110,0.12), 0 0 0 1px rgba(200,169,110,0.08); transition: all 0.4s cubic-bezier(0.25,0.1,0.25,1);">
+      <div class="pricing-card pricing-card-featured price-tier-2 reveal" data-reveal-delay="300" style="background:rgba(26,22,14,0.85); backdrop-filter:blur(14px); border:2px solid rgba(200,169,110,0.55); border-radius:16px; padding:36px 28px; position:relative; display:flex; flex-direction:column; box-shadow: 0 0 40px rgba(200,169,110,0.12), 0 0 0 1px rgba(200,169,110,0.08); transition: all 0.4s cubic-bezier(0.25,0.1,0.25,1);">
         <div class="best-value-badge" style="position:absolute; top:-15px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,#C8A96E,#E8D09C,#C8A96E); background-size:200% auto; animation: goldLinePulse 3s ease infinite, badgePulse 2.2s ease-in-out infinite; color:#0D0D0D; font-family:Inter,sans-serif; font-size:0.68rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; padding:6px 22px; border-radius:99px; white-space:nowrap;">MOST POPULAR</div>
         <p class="font-inter uppercase tracking-widest text-gold mb-1" style="font-size:0.7rem; letter-spacing:0.18em; margin-top:8px;">Business</p>
         <p class="font-inter mb-5" style="color:rgba(245,240,232,0.45); font-size:0.88rem; font-style:italic;">Ordering, reservations &amp; marketing</p>
@@ -1973,7 +1971,7 @@
       </div>
 
       <!-- TIER 3: PREMIUM — $2,500 + $199/mo -->
-      <div class="pricing-card price-tier-3 reveal" data-reveal-delay="600" style="background:rgba(22,22,22,0.7); backdrop-filter:blur(10px); border:2px solid rgba(200,169,110,0.3); border-radius:16px; padding:44px 30px; position:relative; display:flex; flex-direction:column; transition: all 0.4s cubic-bezier(0.25,0.1,0.25,1);">
+      <div class="pricing-card price-tier-3 reveal" data-reveal-delay="600" style="background:rgba(22,22,22,0.7); backdrop-filter:blur(10px); border:2px solid rgba(200,169,110,0.3); border-radius:16px; padding:36px 28px; position:relative; display:flex; flex-direction:column; transition: all 0.4s cubic-bezier(0.25,0.1,0.25,1);">
         <div class="best-value-badge" style="position:absolute; top:-13px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,#C8A96E,#E8D09C,#C8A96E); background-size:200% auto; animation: goldLinePulse 3s ease infinite; color:#0D0D0D; font-family:Inter,sans-serif; font-size:0.6rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; padding:5px 16px; border-radius:99px; white-space:nowrap;">ALL-INCLUSIVE</div>
         <p class="font-inter uppercase tracking-widest text-gold mb-1" style="font-size:0.7rem; letter-spacing:0.18em; margin-top:6px;">Premium</p>
         <p class="font-inter mb-5" style="color:rgba(245,240,232,0.45); font-size:0.88rem; font-style:italic;">The complete digital partner</p>
@@ -1993,6 +1991,7 @@
         </ul>
         <a href="#monthly-addons" class="btn-outline w-full text-center text-sm" style="padding:13px 20px; margin-top:auto;">Go Premium</a>
       </div>
+    </div>
     </div>
 
     <!-- Monthly maintenance tiers — collapsible -->
@@ -2602,6 +2601,29 @@
   menuSectionEls.forEach(function (sec) {
     menuItemObserver.observe(sec);
   });
+
+  // ─── MORE OPTIONS TOGGLE ───
+  (function() {
+    var btn = document.getElementById('more-options-btn');
+    var content = document.getElementById('more-options-content');
+    var arrow = document.getElementById('more-options-arrow');
+    var isOpen = false;
+    if (btn && content) {
+      btn.addEventListener('click', function() {
+        isOpen = !isOpen;
+        if (isOpen) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          content.style.opacity = '1';
+          arrow.style.transform = 'rotate(180deg)';
+          btn.innerHTML = 'Hide Options <svg id="more-options-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" style="transition:transform 0.3s; transform:rotate(180deg);"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
+        } else {
+          content.style.maxHeight = '0';
+          content.style.opacity = '0';
+          btn.innerHTML = 'Need More? See Other Options <svg id="more-options-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" style="transition:transform 0.3s;"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
+        }
+      });
+    }
+  })();
 
   // ─── MONTHLY ADD-ONS TOGGLE ───
   var addonsToggle = document.getElementById('addons-toggle');
