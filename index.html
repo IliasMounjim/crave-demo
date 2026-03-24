@@ -1032,7 +1032,7 @@
       }
       #menu-filters-wrap.scrolled-end::after { display: none !important; }
 
-      /* Header bubbles on mobile */
+      /* Header — single logo bubble on mobile, logo IS the menu trigger */
       #header {
         background: none !important;
         backdrop-filter: none !important;
@@ -1046,41 +1046,29 @@
       }
       #header .flex-shrink-0 {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 80px;
-        height: 80px;
-        background: radial-gradient(circle at top left, rgba(13,13,13,0.95) 50%, transparent 100%);
-        backdrop-filter: blur(12px);
-        border-radius: 0 0 40px 0;
+        top: -10px;
+        left: -10px;
+        width: 100px;
+        height: 100px;
+        background: radial-gradient(circle at top left, rgba(13,13,13,0.98) 40%, rgba(13,13,13,0.6) 60%, transparent 80%);
+        border-radius: 0 0 50px 0;
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 52;
-        padding-right: 8px;
-        padding-bottom: 8px;
+        padding-right: 16px;
+        padding-bottom: 16px;
+        padding-top: 10px;
+        padding-left: 10px;
+        cursor: pointer;
       }
       #header .flex-shrink-0 img {
-        height: 30px !important;
+        height: 28px !important;
+        filter: drop-shadow(0 0 6px rgba(200,169,110,0.2));
       }
+      /* Hide the hamburger — logo is now the menu trigger */
       #hamburger {
-        position: fixed !important;
-        top: 0;
-        right: 0;
-        width: 80px;
-        height: 80px;
-        background: radial-gradient(circle at top right, rgba(13,13,13,0.95) 50%, transparent 100%);
-        backdrop-filter: blur(12px);
-        border-radius: 0 0 0 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 52;
-        padding-left: 8px;
-        padding-bottom: 8px;
-        border-left: 1px solid rgba(200,169,110,0.15);
-        margin: 0 !important;
-        padding: 0 !important;
+        display: none !important;
       }
       #header .hidden.md\:flex,
       #header .hidden.md\:block {
@@ -1309,9 +1297,12 @@
 <!-- Mobile Menu Panel -->
 <div id="mobile-menu" class="fixed z-40 flex flex-col" style="top:0; right:0; bottom:0; width:65%; max-width:300px; background:rgba(13,13,13,0.97); backdrop-filter:blur(24px); border-left:1px solid rgba(200,169,110,0.15); box-shadow:-10px 0 40px rgba(0,0,0,0.5);" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile navigation">
   <div class="flex items-center justify-between px-6 py-4" style="border-bottom:1px solid rgba(200,169,110,0.15);">
-    <img src="images/food/CRAVE-WHITE-768x325.png"
-         alt="Crave Mediterranean Grill"
-         style="height:32px; width:auto;" />
+    <a href="#home" id="menu-logo-home" style="text-decoration:none;">
+      <img src="images/food/CRAVE-WHITE-768x325.png" alt="Crave Mediterranean Grill" style="height:28px; width:auto;" />
+    </a>
+    <button id="menu-collapse-btn" style="background:none; border:none; color:#C8A96E; cursor:pointer; padding:4px; display:flex; align-items:center; justify-content:center;" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
   </div>
   <nav class="flex flex-col justify-center flex-1 px-8 gap-6" aria-label="Mobile navigation">
     <a href="#home" class="mobile-nav-link font-playfair text-xl font-medium text-cream" style="letter-spacing:0.02em; transition: color 0.2s; text-decoration:none;">Home</a>
@@ -1667,8 +1658,8 @@
 <!-- Gold Divider — after gallery -->
 <div style="max-width:120px; margin:0 auto; height:1px; background:linear-gradient(90deg, transparent, rgba(200,169,110,0.3), transparent);"></div>
 
-<!-- TESTIMONIALS -->
-<section class="py-24 px-6 relative overflow-hidden" aria-label="Customer testimonials">
+<!-- (Testimonials moved below order section) -->
+<section class="py-24 px-6 relative overflow-hidden" style="display:none;" aria-label="Customer testimonials">
   <div class="absolute inset-0" style="z-index:0;">
     <img src="images/food/baklava-768x432.jpg" alt="" class="w-full h-full object-cover" style="filter:brightness(0.18) saturate(0.4) blur(2px); opacity:0.6;" loading="lazy" aria-hidden="true" />
   </div>
@@ -1812,7 +1803,38 @@
         </p>
       </div>
     </div>
+  </div>
+</section>
 
+<!-- TESTIMONIALS (moved here — between order and review) -->
+<section class="py-20 px-6 relative overflow-hidden" aria-label="Customer testimonials">
+  <div class="absolute inset-0" style="z-index:0;">
+    <img src="images/food/baklava-768x432.jpg" alt="" class="w-full h-full object-cover" style="filter:brightness(0.18) saturate(0.4) blur(2px); opacity:0.6;" loading="lazy" aria-hidden="true" />
+  </div>
+  <div class="absolute inset-0" style="z-index:0; background:linear-gradient(180deg, #0f0e0c 0%, rgba(15,14,12,0.45) 25%, rgba(15,14,12,0.45) 75%, #0f0e0c 100%);"></div>
+  <div class="max-w-4xl mx-auto relative" style="z-index:1;">
+    <div class="text-center mb-10 reveal">
+      <p class="font-inter uppercase tracking-widest text-gold mb-3" style="font-size:0.8rem; letter-spacing:0.15em;">Reviews</p>
+      <h2 class="font-playfair text-cream" style="font-size:clamp(1.8rem, 3.5vw, 2.4rem); font-weight:600;">What Our Guests Say</h2>
+    </div>
+    <div class="reveal" style="position:relative; overflow:hidden; text-align:center; padding:24px 16px;">
+      <div aria-hidden="true" style="position:absolute; top:-10px; left:20px; font-family:'Playfair Display',serif; font-size:8rem; line-height:1; color:rgba(200,169,110,0.06); pointer-events:none; z-index:0;">&ldquo;</div>
+      <p class="font-playfair font-medium text-cream" style="font-size:clamp(1rem, 2.5vw, 1.25rem); line-height:1.7; font-style:italic; position:relative; z-index:1; max-width:600px; margin:0 auto;">
+        "Finally a place that provides fresh food made with high quality ingredients at a decent price."
+      </p>
+      <p class="font-inter text-gold font-medium mt-4" style="font-size:0.9rem;">— Jonathan Lee</p>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE REVIEW + LOVED YOUR EXPERIENCE -->
+<section class="relative overflow-hidden" aria-label="Review section">
+  <div class="absolute inset-0" style="z-index:0;">
+    <img src="images/crave-interior.webp" alt="" class="w-full h-full object-cover" style="object-position: center 75%; filter: brightness(0.3) saturate(0.7);" loading="lazy" aria-hidden="true" />
+  </div>
+  <div class="absolute inset-0" style="z-index:1; background: linear-gradient(to bottom, #0D0D0D 0%, rgba(13,13,13,0.2) 15%, rgba(13,13,13,0.15) 50%, rgba(13,13,13,0.2) 85%, #0D0D0D 100%);"></div>
+  <div class="absolute inset-0" style="z-index:1; background: radial-gradient(ellipse at center, transparent 30%, rgba(13,13,13,0.6) 100%);"></div>
+  <div class="relative" style="z-index:2;">
     <!-- GOOGLE REVIEW CTA -->
     <div class="py-12 px-6">
       <div class="max-w-3xl mx-auto text-center reveal">
@@ -2343,6 +2365,7 @@
 
   if (mobileBackdrop) { mobileBackdrop.addEventListener('click', closeMenu); }
 
+  // Hamburger (desktop) or logo bubble (mobile) opens menu
   hamburger.addEventListener('click', function () {
     if (mobileMenu.classList.contains('open')) {
       closeMenu();
@@ -2350,6 +2373,35 @@
       openMenu();
     }
   });
+
+  // On mobile, logo click also opens menu
+  var headerLogo = document.querySelector('#header .flex-shrink-0');
+  if (headerLogo && window.innerWidth <= 768) {
+    headerLogo.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (mobileMenu.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+  }
+
+  // Logo inside menu scrolls to top and closes menu
+  var menuLogoHome = document.getElementById('menu-logo-home');
+  if (menuLogoHome) {
+    menuLogoHome.addEventListener('click', function(e) {
+      e.preventDefault();
+      closeMenu();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Collapse arrow closes menu
+  var menuCollapseBtn = document.getElementById('menu-collapse-btn');
+  if (menuCollapseBtn) {
+    menuCollapseBtn.addEventListener('click', closeMenu);
+  }
 
   document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
     link.addEventListener('click', closeMenu);
