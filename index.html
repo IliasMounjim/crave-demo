@@ -2085,39 +2085,68 @@
     });
   })();
 
-  // ─── LOADING ANIMATION ───
+  // ─── LOADING ANIMATION (reusable) ───
   const taglineText = 'you crave, we serve';
   const taglineEl = document.getElementById('loading-tagline');
   const overlay = document.getElementById('loading-overlay');
 
-  // Type the tagline letter by letter starting at 1.2s
-  let charIdx = 0;
-  function typeChar() {
-    if (charIdx < taglineText.length) {
-      const span = document.createElement('span');
-      span.textContent = taglineText[charIdx] === ' ' ? '\u00A0' : taglineText[charIdx];
-      span.style.cssText = 'opacity:0; transform:translateY(4px); display:inline-block; transition: opacity 0.12s ease, transform 0.12s ease;';
-      taglineEl.appendChild(span);
-      // Trigger transition on next frame
-      requestAnimationFrame(function () {
-        requestAnimationFrame(function () {
-          span.style.opacity = '1';
-          span.style.transform = 'translateY(0)';
-        });
-      });
-      charIdx++;
-      setTimeout(typeChar, 65);
-    }
-  }
-  setTimeout(typeChar, 1200);
+  function runLoader(scrollToTop) {
+    // Reset overlay
+    overlay.style.display = 'flex';
+    overlay.classList.remove('fade-out');
+    taglineEl.innerHTML = '';
 
-  // Dismiss overlay at 2.6s with clip-path wipe
-  setTimeout(function () {
-    overlay.classList.add('fade-out');
-    overlay.addEventListener('animationend', function () {
-      overlay.style.display = 'none';
-    }, { once: true });
-  }, 2600);
+    if (scrollToTop) {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
+
+    // Type tagline
+    var idx = 0;
+    function typeIt() {
+      if (idx < taglineText.length) {
+        var s = document.createElement('span');
+        s.textContent = taglineText[idx] === ' ' ? '\u00A0' : taglineText[idx];
+        s.style.cssText = 'opacity:0; transform:translateY(4px); display:inline-block; transition: opacity 0.12s ease, transform 0.12s ease;';
+        taglineEl.appendChild(s);
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            s.style.opacity = '1';
+            s.style.transform = 'translateY(0)';
+          });
+        });
+        idx++;
+        setTimeout(typeIt, 65);
+      }
+    }
+    setTimeout(typeIt, 1200);
+
+    // Dismiss at 2.6s
+    setTimeout(function() {
+      overlay.classList.add('fade-out');
+      overlay.addEventListener('animationend', function() {
+        overlay.style.display = 'none';
+      }, { once: true });
+    }, 2600);
+  }
+
+  // Initial load
+  runLoader(false);
+
+  // Hook into Home links, logos, and View Again
+  document.querySelectorAll('a[href="#home"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      runLoader(true);
+    });
+  });
+
+  // Logo clicks in header
+  document.querySelectorAll('a[aria-label="Crave Mediterranean Grill - Home"]').forEach(function(logo) {
+    logo.addEventListener('click', function(e) {
+      e.preventDefault();
+      runLoader(true);
+    });
+  });
 
   // ─── HERO PARTICLES ───
   const particleContainer = document.getElementById('hero-particles');
@@ -2568,12 +2597,12 @@
       }
     }, { passive: true });
 
-    // View Again button — unlock and scroll to top
+    // View Again button — unlock and replay loader
     if (viewAgainBtn) {
       viewAgainBtn.addEventListener('click', function() {
         locked = false;
         if (viewAgainWrap) { viewAgainWrap.style.display = 'none'; }
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        runLoader(true);
       });
     }
   })();
