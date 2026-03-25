@@ -823,6 +823,22 @@
     .pricing-card { animation: cardGlow 4s ease-in-out infinite; }
     .pricing-card-featured { animation: cardGlow 3s ease-in-out infinite, badgePulse 2.2s ease-in-out infinite; }
 
+    /* ── REVIEW CAROUSEL ── */
+    .review-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      pointer-events: none;
+    }
+    .review-slide.active {
+      position: relative;
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
     /* ── WATERMARK ── */
     .wm-text {
       font-family: 'Playfair Display', serif;
@@ -1816,17 +1832,39 @@
     <!-- Subtle divider -->
     <div style="max-width:200px; margin:0 auto; height:1px; background:linear-gradient(90deg, transparent, rgba(200,169,110,0.2), transparent);"></div>
 
-    <!-- TESTIMONIALS -->
+    <!-- TESTIMONIALS — rotating -->
     <div class="py-16 px-6">
       <div class="max-w-4xl mx-auto text-center reveal">
-        <p class="font-inter uppercase tracking-widest text-gold mb-3" style="font-size:0.75rem; letter-spacing:0.15em;">Reviews</p>
+        <p class="font-inter uppercase tracking-widest text-gold mb-3" style="font-size:0.75rem; letter-spacing:0.15em;">4.7 Stars &middot; 400+ Reviews</p>
         <h2 class="font-playfair text-cream mb-8" style="font-size:clamp(1.6rem, 3.5vw, 2.2rem); font-weight:600;">What Our Guests Say</h2>
-        <div style="position:relative; padding:20px 16px;">
-          <div aria-hidden="true" style="position:absolute; top:-10px; left:20px; font-family:'Playfair Display',serif; font-size:7rem; line-height:1; color:rgba(200,169,110,0.06); pointer-events:none;">&ldquo;</div>
-          <p class="font-playfair font-medium text-cream" style="font-size:clamp(1rem, 2.5vw, 1.2rem); line-height:1.8; font-style:italic; max-width:550px; margin:0 auto;">
-            "Finally a place that provides fresh food made with high quality ingredients at a decent price."
-          </p>
-          <p class="font-inter text-gold font-medium mt-4" style="font-size:0.85rem;">— Jonathan Lee</p>
+        <div style="position:relative; overflow:hidden;">
+          <div aria-hidden="true" style="position:absolute; top:-10px; left:20px; font-family:'Playfair Display',serif; font-size:7rem; line-height:1; color:rgba(200,169,110,0.06); pointer-events:none; z-index:0;">&ldquo;</div>
+          <div id="review-carousel" style="position:relative; min-height:120px;">
+            <div class="review-slide active" style="padding:20px 16px;">
+              <p class="font-playfair font-medium text-cream" style="font-size:clamp(1rem, 2.5vw, 1.15rem); line-height:1.8; font-style:italic; max-width:550px; margin:0 auto;">"Finally a place that provides fresh food made with high quality ingredients at a decent price."</p>
+              <p class="font-inter text-gold font-medium mt-4" style="font-size:0.85rem;">— Jonathan Lee</p>
+            </div>
+            <div class="review-slide" style="padding:20px 16px;">
+              <p class="font-playfair font-medium text-cream" style="font-size:clamp(1rem, 2.5vw, 1.15rem); line-height:1.8; font-style:italic; max-width:550px; margin:0 auto;">"The lamb shank is the best I've ever had. Tender, flavorful, and the portion is generous. This place is a hidden gem."</p>
+              <p class="font-inter text-gold font-medium mt-4" style="font-size:0.85rem;">— Sarah M.</p>
+            </div>
+            <div class="review-slide" style="padding:20px 16px;">
+              <p class="font-playfair font-medium text-cream" style="font-size:clamp(1rem, 2.5vw, 1.15rem); line-height:1.8; font-style:italic; max-width:550px; margin:0 auto;">"Never have I had such amazing Mediterranean food! The fresh baked pies are like nothing I've had before."</p>
+              <p class="font-inter text-gold font-medium mt-4" style="font-size:0.85rem;">— Riya Prakash</p>
+            </div>
+            <div class="review-slide" style="padding:20px 16px;">
+              <p class="font-playfair font-medium text-cream" style="font-size:clamp(1rem, 2.5vw, 1.15rem); line-height:1.8; font-style:italic; max-width:550px; margin:0 auto;">"We order from here at least once a week. The chicken shawarma and hummus are always fresh and perfectly prepared."</p>
+              <p class="font-inter text-gold font-medium mt-4" style="font-size:0.85rem;">— Michael P.</p>
+            </div>
+            <div class="review-slide" style="padding:20px 16px;">
+              <p class="font-playfair font-medium text-cream" style="font-size:clamp(1rem, 2.5vw, 1.15rem); line-height:1.8; font-style:italic; max-width:550px; margin:0 auto;">"Best Mediterranean food in Denver. The kabob combo is incredible and the staff treats you like family."</p>
+              <p class="font-inter text-gold font-medium mt-4" style="font-size:0.85rem;">— David R.</p>
+            </div>
+            <div class="review-slide" style="padding:20px 16px;">
+              <p class="font-playfair font-medium text-cream" style="font-size:clamp(1rem, 2.5vw, 1.15rem); line-height:1.8; font-style:italic; max-width:550px; margin:0 auto;">"The atmosphere is wonderful and the food is authentic. You can taste the love in every dish. Highly recommend the grape leaves."</p>
+              <p class="font-inter text-gold font-medium mt-4" style="font-size:0.85rem;">— Dana H.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -2192,6 +2230,18 @@
     });
   })();
 
+  // ─── REVIEW CAROUSEL ───
+  (function() {
+    var slides = document.querySelectorAll('.review-slide');
+    if (slides.length < 2) return;
+    var current = 0;
+    setInterval(function() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 5000);
+  })();
+
   // ─── RADIAL MENU (mobile) ───
   (function() {
     var bubble = document.getElementById('mobile-logo-bubble');
@@ -2475,7 +2525,24 @@
       track.style.transform = 'translateX(-' + (pos * slideWidth()) + '%)';
     }
 
-    function next() { goTo(pos >= maxPos() ? 0 : pos + 1); }
+    function next() {
+      if (pos >= maxPos()) {
+        // Smooth reset: fade out, jump to 0, fade in
+        track.style.transition = 'opacity 0.3s ease';
+        track.style.opacity = '0.3';
+        setTimeout(function() {
+          track.style.transition = 'none';
+          pos = 0;
+          track.style.transform = 'translateX(0)';
+          setTimeout(function() {
+            track.style.transition = 'transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.3s ease';
+            track.style.opacity = '1';
+          }, 50);
+        }, 300);
+      } else {
+        goTo(pos + 1);
+      }
+    }
     function prev() { goTo(pos <= 0 ? maxPos() : pos - 1); }
 
     document.getElementById('dish-next').addEventListener('click', function() { stopAuto(); next(); startAuto(); });
